@@ -18,48 +18,47 @@
           "type": "link_column",
           "settings": {
             "column_title": "Product",
-            "links": "Shop|\/collections\/all||Returns|\/pages\/returns||FAQs|\/pages\/faq||Rewards|\/pages\/rewards||Refer A Friend|\/pages\/refer"
+            "links": "Shop|/collections/all||Returns|/pages/returns||FAQs|/pages/faq||Rewards|/pages/rewards||Refer A Friend|/pages/refer"
           }
         },
         "link_column_9qBEhm": {
           "type": "link_column",
           "settings": {
             "column_title": "About",
-            "links": "About Us|\/pages\/about||Contact Us|\/pages\/contact||Store Locator|\/pages\/stores||Careers|\/pages\/careers||Press|\/pages\/press"
+            "links": "About Us|/pages/about||Contact Us|/pages/contact||Store Locator|/pages/stores||Careers|/pages/careers||Press|/pages/press"
           }
         },
         "link_column_Qce8z7": {
           "type": "link_column",
           "settings": {
             "column_title": "Social",
-            "links": "Email|mailto:support@example.com||Facebook|https:\/\/facebook.com||Instagram|https:\/\/instagram.com||Twitter|https:\/\/twitter.com"
+            "links": "Email|mailto:support@example.com||Facebook|https://facebook.com||Instagram|https://instagram.com||Twitter|https://twitter.com"
           }
         },
         "link_column_iaWWzt": {
           "type": "link_column",
           "settings": {
             "column_title": "Terms",
-            "links": "Terms & Conditions|\/pages\/terms||Privacy Policy|\/pages\/privacy||Patent Info|\/pages\/patent"
+            "links": "Terms & Conditions|/pages/terms||Privacy Policy|/pages/privacy||Patent Info|/pages/patent"
+          }
+        },
+        "link_column_xtUHB6": {
+          "type": "link_column",
+          "settings": {
+            "column_title": "Collections",
+            "links": "For Her|/collections/gifting||For Him|/collections/self-care||Couples|/collections/couples||Self-care|/collections/for-beginners"
           }
         },
         "copyright_jtF9D7": {
           "type": "copyright",
           "settings": {
             "column_title": "Copyright",
-            "copyright_text": "<p>MoonVelour, Inc<br\/>© 2026<\/p>"
+            "copyright_text": "<p>MoonVelour, Inc<br/>© 2026</p>"
           }
         }
       },
-      "block_order": [
-        "link_column_h4kgKX",
-        "link_column_9qBEhm",
-        "link_column_Qce8z7",
-        "link_column_iaWWzt",
-        "copyright_jtF9D7"
-      ],
-      "custom_css": [
-        ".bg-custom {background: #f7f7f7;}"
-      ],
+      "block_order": ["link_column_h4kgKX", "link_column_9qBEhm", "link_column_Qce8z7", "link_column_iaWWzt", "link_column_xtUHB6", "copyright_jtF9D7"],
+      "custom_css": [".bg-custom {background: #f7f7f7;}"],
       "name": "Footer Dame",
       "settings": {
         "max_width": "1400px",
@@ -82,7 +81,7 @@
         "padding_left_mobile": 20,
         "padding_right_mobile": 20,
         "show_newsletter": true,
-        "newsletter_title": "<p>Subscribe to our emails<\/p>",
+        "newsletter_title": "<p>Subscribe to our emails</p>",
         "newsletter_title_size_desktop": 40,
         "newsletter_title_size_mobile": 32,
         "newsletter_title_color": "#624c63",
@@ -143,8 +142,5 @@
       }
     }
   },
-  "order": [
-    "footer_dame_pdgg9b",
-    "footer"
-  ]
+  "order": ["footer_dame_pdgg9b", "footer"]
 }

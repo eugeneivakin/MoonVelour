@@ -1,0 +1,797 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_banner_dame": {
+      "type": "hero-banner-dame",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "",
+            "feature_title": "Medical-Grade Silicone",
+            "feature_description": ""
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "",
+            "feature_title": "USB-C Rechargeable",
+            "feature_description": "(Charge Your Phone & Vibe)"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "",
+            "feature_title": "60 Day Satisfaction<br>Guarantee",
+            "feature_description": ""
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "feature_icon": "",
+            "feature_title": "10,000+ 5 star reviews",
+            "feature_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": "100%",
+        "section_background_color": "#f8f8f8",
+        "custom_classes": "",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 0,
+        "padding_right_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "background_image": "shopify://shop_images/Generated_Image_December_28_2025_-_4_32PM_1.jpg",
+        "image_position_desktop": "center",
+        "image_position_mobile": "center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30,
+        "min_height_desktop": 90,
+        "min_height_mobile": 70,
+        "content_max_width": 600,
+        "content_padding_top": 0,
+        "content_padding_bottom": 150,
+        "content_padding_left": 80,
+        "content_padding_right": 80,
+        "content_padding_top_mobile": 40,
+        "content_padding_bottom_mobile": 100,
+        "content_padding_left_mobile": 30,
+        "content_padding_right_mobile": 30,
+        "content_vertical_alignment": "center",
+        "content_horizontal_alignment": "flex-start",
+        "content_text_alignment": "left",
+        "content_vertical_alignment_mobile": "center",
+        "content_horizontal_alignment_mobile": "flex-start",
+        "content_text_alignment_mobile": "left",
+        "show_rating": true,
+        "rating_icon": "★★★★★",
+        "rating_text": "Over 50,000 Happy Vulvas",
+        "rating_text_size_desktop": 11,
+        "rating_text_size_mobile": 10,
+        "rating_text_color": "#ffffff",
+        "title": "<p>By Women, For<br/>Women wrapped.</p>",
+        "title_size_desktop": 60,
+        "title_size_mobile": 48,
+        "title_color": "#ffffff",
+        "title_font_weight": "300",
+        "subtitle": "<p>Vibrators and sexual health essentials researched, developed, and designed by women for over a decade.</p>",
+        "subtitle_size_desktop": 16,
+        "subtitle_size_mobile": 16,
+        "subtitle_color": "#ffffff",
+        "subtitle_font_weight": "400",
+        "button_primary_text": "Shop All Products",
+        "button_primary_url": "shopify://collections/all",
+        "button_primary_bg_color": "#b4d455",
+        "button_primary_text_color": "#000000",
+        "button_secondary_text": "",
+        "button_secondary_url": "#",
+        "button_secondary_bg_color": "#e8e5b8",
+        "button_secondary_text_color": "#000000",
+        "buttons_direction": "column",
+        "buttons_direction_mobile": "column",
+        "buttons_gap": 15,
+        "button_border_radius": 4,
+        "features_position": "bottom",
+        "features_background_image": "shopify://shop_images/Group_329.webp",
+        "features_max_width": 600,
+        "features_border_radius": 0,
+        "features_columns": 2,
+        "features_gap": 30,
+        "features_columns_mobile": 1,
+        "features_gap_mobile": 20,
+        "features_padding_top": 60,
+        "features_padding_bottom": 40,
+        "features_padding_left": 60,
+        "features_padding_right": 60,
+        "features_padding_top_mobile": 30,
+        "features_padding_bottom_mobile": 20,
+        "features_padding_left_mobile": 20,
+        "features_padding_right_mobile": 20,
+        "feature_title_color": "#ffffff",
+        "feature_description_color": "#ffffff",
+        "feature_title_size_desktop": 21,
+        "feature_title_size_mobile": 18,
+        "feature_description_size_desktop": 16,
+        "feature_description_size_mobile": 14
+      }
+    },
+    "image_hero_banner_xNWNbc": {
+      "type": "image-hero-banner",
+      "name": "Image Hero Banner",
+      "settings": {
+        "custom_classes": "",
+        "padding_top_desktop": 16,
+        "padding_bottom_desktop": 60,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 16,
+        "desktop_image": "shopify://shop_images/Generated_Image_December_28_2025_-_4_32PM_1.jpg",
+        "mobile_image": "shopify://shop_images/Generated_Image_December_28_2025_-_4_32PM_1.jpg",
+        "image_position_mobile": "center center",
+        "min_height_desktop": 650,
+        "min_height_mobile": 500,
+        "border_radius": 20,
+        "enable_overlay": true,
+        "overlay_color": "#000000",
+        "overlay_opacity": 50,
+        "title": "Intimacy, designed with care",
+        "subtitle": "",
+        "title_size_desktop": 60,
+        "title_size_mobile": 40,
+        "button_text": "Shop Collection",
+        "button_url": "shopify://collections",
+        "content_position": "bottom-left",
+        "content_alignment": "left",
+        "content_alignment_mobile": "center",
+        "content_max_width": 100,
+        "content_max_width_mobile": 95,
+        "text_color": "#f8f8f8",
+        "button_bg_color": "#7850ca",
+        "button_text_color": "#f8f8f8"
+      }
+    },
+    "features_bar_G3UH7a": {
+      "type": "features-bar",
+      "blocks": {
+        "feature_NA8CXC": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/delivery-truck-svgrepo-com.svg",
+            "title": "Discreet local delivery (from 1 hour in Greater Vancouver)",
+            "subtitle": ""
+          }
+        },
+        "feature_pmVkJp": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/product-svgrepo-com.svg",
+            "title": "Carefully curated products",
+            "subtitle": ""
+          }
+        },
+        "feature_Yz9b9B": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/supplies-svgrepo-com.svg",
+            "title": "Trusted suppliers",
+            "subtitle": ""
+          }
+        },
+        "feature_ra9UMp": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/privacy-dashboard-svgrepo-com.svg",
+            "title": "Privacy & comfort first",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_NA8CXC",
+        "feature_pmVkJp",
+        "feature_Yz9b9B",
+        "feature_ra9UMp"
+      ],
+      "name": "Features bar",
+      "settings": {
+        "background_color": "#63616e",
+        "icon_color": "#ffffff",
+        "text_color": "#ffffff",
+        "border_color": "#63616e",
+        "border_radius": 24,
+        "padding_vertical": 40,
+        "padding_horizontal": 0
+      }
+    },
+    "image_with_text_jY3CmK": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_gWdjLY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>MoonVelour was created to redefine how sexual wellness is experienced.<br/>We believe intimacy should feel natural, calm and personal — without pressure, vulgarity or stereotypes. Every product we offer is selected with care, focusing on quality, comfort and trust.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_gWdjLY"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/dark-purple-velour.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "categories_grid_dame_6KPq43": {
+      "type": "categories-grid-dame",
+      "blocks": {
+        "category_Ap8LYJ": {
+          "type": "category",
+          "settings": {
+            "card_bg_color": "#e8dcc8",
+            "badge_text": "",
+            "badge_bg_color": "#624c63",
+            "badge_text_color": "#f8f8f8",
+            "category_title": "<p>For Her</p>",
+            "title_color": "#ffffff",
+            "category_image": "shopify://shop_images/for-Her.jpg",
+            "use_image_as_background": true,
+            "show_overlay": true,
+            "overlay_opacity": 40,
+            "overlay_color": "#000000",
+            "category_icon": "",
+            "button_text": "SHOP",
+            "button_url": "shopify://collections/gifting",
+            "button_bg_color": "#7850ca",
+            "button_text_color": "#f8f8f8"
+          }
+        },
+        "category_N7amfj": {
+          "type": "category",
+          "settings": {
+            "card_bg_color": "#b8c5d8",
+            "badge_text": "",
+            "badge_bg_color": "#624c63",
+            "badge_text_color": "#f8f8f8",
+            "category_title": "<p>For Him</p>",
+            "title_color": "#ffffff",
+            "category_image": "shopify://shop_images/for-Him.jpg",
+            "use_image_as_background": true,
+            "show_overlay": true,
+            "overlay_opacity": 40,
+            "overlay_color": "#000000",
+            "category_icon": "",
+            "button_text": "SHOP",
+            "button_url": "shopify://collections/self-care",
+            "button_bg_color": "#7850ca",
+            "button_text_color": "#f8f8f8"
+          }
+        },
+        "category_VjCcE7": {
+          "type": "category",
+          "settings": {
+            "card_bg_color": "#e8dcc8",
+            "badge_text": "",
+            "badge_bg_color": "#624c63",
+            "badge_text_color": "#f8f8f8",
+            "category_title": "<p>For Couples</p>",
+            "title_color": "#ffffff",
+            "category_image": "shopify://shop_images/couples.jpg",
+            "use_image_as_background": true,
+            "show_overlay": true,
+            "overlay_opacity": 40,
+            "overlay_color": "#000000",
+            "category_icon": "",
+            "button_text": "SHOP",
+            "button_url": "shopify://collections/couples",
+            "button_bg_color": "#7850ca",
+            "button_text_color": "#f8f8f8"
+          }
+        },
+        "category_yFqkMn": {
+          "type": "category",
+          "settings": {
+            "card_bg_color": "#b8c5d8",
+            "badge_text": "",
+            "badge_bg_color": "#624c63",
+            "badge_text_color": "#f8f8f8",
+            "category_title": "<p>Care & Comfort</p>",
+            "title_color": "#ffffff",
+            "category_image": "shopify://shop_images/self-care.jpg",
+            "use_image_as_background": true,
+            "show_overlay": true,
+            "overlay_opacity": 40,
+            "overlay_color": "#000000",
+            "category_icon": "",
+            "button_text": "SHOP",
+            "button_url": "shopify://collections/for-beginners",
+            "button_bg_color": "#7850ca",
+            "button_text_color": "#f8f8f8"
+          }
+        }
+      },
+      "block_order": [
+        "category_Ap8LYJ",
+        "category_N7amfj",
+        "category_VjCcE7",
+        "category_yFqkMn"
+      ],
+      "name": "Categories Grid Dame",
+      "settings": {
+        "max_width": "1400px",
+        "section_background_color": "#ffffff",
+        "custom_classes": "",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_left_desktop": 52,
+        "padding_right_desktop": 52,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "show_section_title": false,
+        "section_title": "",
+        "section_title_size_desktop": 52,
+        "section_title_size_mobile": 36,
+        "section_title_color": "#0000ff",
+        "section_title_font_weight": "500",
+        "section_title_alignment": "left",
+        "section_title_margin_bottom": 40,
+        "columns_desktop": 4,
+        "columns_tablet": 2,
+        "columns_mobile": 2,
+        "grid_gap_desktop": 20,
+        "grid_gap_mobile": 15,
+        "card_min_height": 480,
+        "card_min_height_mobile": 350,
+        "card_padding": 25,
+        "card_padding_mobile": 20,
+        "card_border_radius": 20,
+        "badge_font_size_desktop": 9,
+        "badge_font_size_mobile": 8,
+        "title_font_size_desktop": 36,
+        "title_font_size_mobile": 24,
+        "title_font_weight": "600",
+        "image_max_height": 180,
+        "image_max_height_mobile": 140,
+        "icon_max_width": 150,
+        "icon_max_height": 150,
+        "icon_max_width_mobile": 120,
+        "icon_max_height_mobile": 120,
+        "button_hover_show": true,
+        "button_font_size_desktop": 11,
+        "button_font_size_mobile": 10,
+        "button_border_radius": 8
+      }
+    },
+    "bestsellers_slider_dame_N3BKD7": {
+      "type": "bestsellers-slider-dame",
+      "name": "Bestsellers Slider",
+      "settings": {
+        "max_width": "1400px",
+        "section_background_color": "#ffffff",
+        "custom_classes": "",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_left_desktop": 0,
+        "padding_right_desktop": 0,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "collection": "couples",
+        "products_to_show": 8,
+        "section_title": "<p>Our <strong>Bestsellers</strong></p>",
+        "animate_bold_words": true,
+        "title_size_desktop": 52,
+        "title_size_mobile": 36,
+        "title_color": "#624c63",
+        "title_font_weight": "500",
+        "section_subtitle": "<p>Community favorites for pleasure and play.</p>",
+        "subtitle_size_desktop": 17,
+        "subtitle_size_mobile": 15,
+        "subtitle_color": "#7850ca",
+        "subtitle_font_weight": "400",
+        "header_margin_bottom": 40,
+        "show_view_all": true,
+        "button_text": "SEE ALL →",
+        "button_url": "",
+        "see_all_bg_color": "#ffffff",
+        "see_all_text_color": "#624c63",
+        "see_all_border_color": "#624c63",
+        "see_all_hover_bg_color": "#624c63",
+        "see_all_hover_text_color": "#f8f8f8",
+        "card_width": 300,
+        "card_width_mobile": 280,
+        "products_gap": 20,
+        "show_progress_bar": true,
+        "progress_bar_color": "#b8b3e8",
+        "show_navigation_arrows": true,
+        "arrow_bg_color": "#ffffff",
+        "arrow_color": "#624c63",
+        "arrow_hover_bg_color": "#624c63",
+        "card_bg_color": "#ffffff",
+        "card_padding": 20,
+        "card_padding_mobile": 15,
+        "card_border_radius": 15,
+        "product_image_height": 280,
+        "product_image_height_mobile": 220,
+        "product_name_size_desktop": 22,
+        "product_name_size_mobile": 18,
+        "product_name_color": "#000000",
+        "product_name_font_weight": "500",
+        "show_rating": true,
+        "stars_color": "#edbf2e",
+        "reviews_text_color": "#666666",
+        "show_product_type": true,
+        "category_text_color": "#666666",
+        "show_color_swatches": true,
+        "color_dot_active_border": "#624c63",
+        "sold_out_text": "SOLD OUT",
+        "badge_sold_out_bg": "#e8e5b8",
+        "badge_sold_out_color": "#000000",
+        "bestseller_text": "BESTSELLER",
+        "badge_bestseller_bg": "#b4d455",
+        "badge_bestseller_color": "#000000",
+        "add_to_cart_text": "ADD TO CART",
+        "button_bg_color": "#7850ca",
+        "button_text_color": "#ffffff",
+        "sold_out_button_bg": "#b8b3e8",
+        "sold_out_button_color": "#ffffff",
+        "product_button_border_radius": 8,
+        "price_original_color": "#999999",
+        "price_sale_color": "#7850ca",
+        "discount_badge_bg": "#ff4444",
+        "discount_badge_color": "#ffffff"
+      }
+    },
+    "bestsellers_slider_dame_hEt8rh": {
+      "type": "bestsellers-slider-dame",
+      "disabled": true,
+      "name": "Bestsellers Slider",
+      "settings": {
+        "max_width": "1400px",
+        "section_background_color": "#ffffff",
+        "custom_classes": "",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_left_desktop": 0,
+        "padding_right_desktop": 0,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "collection": "couples",
+        "products_to_show": 8,
+        "section_title": "<p>New Arrivals</p>",
+        "animate_bold_words": false,
+        "title_size_desktop": 52,
+        "title_size_mobile": 36,
+        "title_color": "#624c63",
+        "title_font_weight": "500",
+        "section_subtitle": "<p>Community favorites for pleasure and play.</p>",
+        "subtitle_size_desktop": 17,
+        "subtitle_size_mobile": 15,
+        "subtitle_color": "#7850ca",
+        "subtitle_font_weight": "400",
+        "header_margin_bottom": 40,
+        "show_view_all": true,
+        "button_text": "SEE ALL →",
+        "button_url": "",
+        "see_all_bg_color": "#ffffff",
+        "see_all_text_color": "#624c63",
+        "see_all_border_color": "#624c63",
+        "see_all_hover_bg_color": "#624c63",
+        "see_all_hover_text_color": "#f8f8f8",
+        "card_width": 300,
+        "card_width_mobile": 280,
+        "products_gap": 20,
+        "show_progress_bar": true,
+        "progress_bar_color": "#b8b3e8",
+        "show_navigation_arrows": true,
+        "arrow_bg_color": "#ffffff",
+        "arrow_color": "#624c63",
+        "arrow_hover_bg_color": "#624c63",
+        "card_bg_color": "#ffffff",
+        "card_padding": 20,
+        "card_padding_mobile": 15,
+        "card_border_radius": 15,
+        "product_image_height": 280,
+        "product_image_height_mobile": 220,
+        "product_name_size_desktop": 22,
+        "product_name_size_mobile": 18,
+        "product_name_color": "#000000",
+        "product_name_font_weight": "500",
+        "show_rating": true,
+        "stars_color": "#edbf2e",
+        "reviews_text_color": "#666666",
+        "show_product_type": true,
+        "category_text_color": "#666666",
+        "show_color_swatches": true,
+        "color_dot_active_border": "#7850ca",
+        "sold_out_text": "SOLD OUT",
+        "badge_sold_out_bg": "#e8e5b8",
+        "badge_sold_out_color": "#000000",
+        "bestseller_text": "BESTSELLER",
+        "badge_bestseller_bg": "#b4d455",
+        "badge_bestseller_color": "#000000",
+        "add_to_cart_text": "ADD TO CART",
+        "button_bg_color": "#7850ca",
+        "button_text_color": "#ffffff",
+        "sold_out_button_bg": "#b8b3e8",
+        "sold_out_button_color": "#ffffff",
+        "product_button_border_radius": 8,
+        "price_original_color": "#999999",
+        "price_sale_color": "#7850ca",
+        "discount_badge_bg": "#ff4444",
+        "discount_badge_color": "#ffffff"
+      }
+    },
+    "ticker_runner_dame_VaMjDT": {
+      "type": "ticker-runner-dame",
+      "blocks": {
+        "ticker_item_Jgcjk4": {
+          "type": "ticker_item",
+          "settings": {
+            "icon": "<svg viewbox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"23\" stroke=\"white\" stroke-width=\"2\"></circle><circle cx=\"16\" cy=\"18\" r=\"3\" fill=\"white\"></circle><circle cx=\"32\" cy=\"18\" r=\"3\" fill=\"white\"></circle><path d=\"M15 30 Q24 36 33 30\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\"></path></svg>",
+            "text": "User-Tested + Doctor-Approved"
+          }
+        },
+        "ticker_item_KKpRxE": {
+          "type": "ticker_item",
+          "settings": {
+            "icon": "<svg viewbox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"23\" stroke=\"white\" stroke-width=\"2\"></circle><circle cx=\"16\" cy=\"18\" r=\"3\" fill=\"white\"></circle><circle cx=\"32\" cy=\"18\" r=\"3\" fill=\"white\"></circle><path d=\"M15 30 Q24 36 33 30\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\"></path></svg>",
+            "text": "Discreet Shipping"
+          }
+        },
+        "ticker_item_cPAgrY": {
+          "type": "ticker_item",
+          "settings": {
+            "icon": "<svg viewbox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"23\" stroke=\"white\" stroke-width=\"2\"></circle><circle cx=\"16\" cy=\"18\" r=\"3\" fill=\"white\"></circle><circle cx=\"32\" cy=\"18\" r=\"3\" fill=\"white\"></circle><path d=\"M15 30 Q24 36 33 30\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\"></path></svg>",
+            "text": "3 Year Warranty"
+          }
+        }
+      },
+      "block_order": [
+        "ticker_item_Jgcjk4",
+        "ticker_item_KKpRxE",
+        "ticker_item_cPAgrY"
+      ],
+      "disabled": true,
+      "name": "Ticker Runner Dame",
+      "settings": {
+        "max_width": "100%",
+        "section_background_color": "#624c63",
+        "custom_classes": "",
+        "padding_top_desktop": 12,
+        "padding_bottom_desktop": 12,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 16,
+        "animation_speed": 30,
+        "pause_on_hover": false,
+        "text_size_desktop": 28,
+        "text_size_mobile": 24,
+        "text_color": "#f3f3f3",
+        "text_font_weight": "500",
+        "text_letter_spacing": 0,
+        "icon_size_desktop": 32,
+        "icon_size_mobile": 36,
+        "icon_text_gap": 20,
+        "item_gap": 60
+      }
+    },
+    "reviews_slider_dame_zXjrYc": {
+      "type": "reviews-slider-dame",
+      "blocks": {
+        "review_ALzDMB": {
+          "type": "review",
+          "settings": {
+            "show_stars": true,
+            "rating": 5,
+            "review_text": "<p>\"I have 3 of these vibrators and I maybe want more? How much better of a review can you get! I never realized I needed more than one but I'm hooked! They aren't just for solo play either!\"</p>",
+            "author_name": "Alessandra T."
+          }
+        },
+        "review_TEtqbV": {
+          "type": "review",
+          "settings": {
+            "show_stars": true,
+            "rating": 5,
+            "review_text": "<p>\"This is amazing. This beautiful little device fits perfectly in your hand and the smooth texture is very pleasing to the touch.\"</p>",
+            "author_name": "Jacinta N."
+          }
+        },
+        "review_VbAmPz": {
+          "type": "review",
+          "settings": {
+            "show_stars": true,
+            "rating": 5,
+            "review_text": "<p>\"This toy is GREAT. I do not get off from penetration, but companied with penetration, it's the best sex I've ever had!\"</p>",
+            "author_name": "Tisha G."
+          }
+        },
+        "review_wFCqdC": {
+          "type": "review",
+          "settings": {
+            "show_stars": true,
+            "rating": 5,
+            "review_text": "<p>\"This toy is GREAT. I do not get off from penetration, but companied with penetration, it's the best sex I've ever had!\"</p>",
+            "author_name": "Tisha G."
+          }
+        },
+        "review_tWdF66": {
+          "type": "review",
+          "settings": {
+            "show_stars": true,
+            "rating": 5,
+            "review_text": "<p>\"This toy is GREAT. I do not get off from penetration, but companied with penetration, it's the best sex I've ever had!\"</p>",
+            "author_name": "Tisha G."
+          }
+        }
+      },
+      "block_order": [
+        "review_ALzDMB",
+        "review_TEtqbV",
+        "review_VbAmPz",
+        "review_wFCqdC",
+        "review_tWdF66"
+      ],
+      "disabled": true,
+      "name": "Reviews Slider Dame",
+      "settings": {
+        "max_width": "1400px",
+        "section_background_color": "#ffffff",
+        "custom_classes": "",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 40,
+        "padding_left_desktop": 52,
+        "padding_right_desktop": 52,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "section_title": "<p>What Customers Say</p>",
+        "title_size_desktop": 52,
+        "title_size_mobile": 36,
+        "title_color": "#624c63",
+        "title_font_weight": "500",
+        "section_subtitle": "",
+        "subtitle_size_desktop": 20,
+        "subtitle_size_mobile": 13,
+        "subtitle_color": "#624c63",
+        "subtitle_font_weight": "400",
+        "header_alignment": "center",
+        "header_margin_bottom": 20,
+        "cards_per_view": 35,
+        "card_min_width": 400,
+        "card_width_mobile": 300,
+        "cards_gap": 30,
+        "slider_padding_vertical": 40,
+        "slider_padding_horizontal": 100,
+        "slider_padding_vertical_mobile": 30,
+        "slider_padding_horizontal_mobile": 20,
+        "inactive_scale": 0.9,
+        "inactive_opacity": 0.7,
+        "card_bg_color": "#ffffff",
+        "card_padding": 50,
+        "card_padding_mobile": 30,
+        "card_border_radius": 20,
+        "stars_color": "#ecaf19",
+        "star_size": 14,
+        "stars_gap": 5,
+        "stars_margin_bottom": 25,
+        "review_text_size_desktop": 16,
+        "review_text_size_mobile": 16,
+        "review_text_color": "#624c63",
+        "review_text_font_weight": "400",
+        "review_text_line_height": 1.7,
+        "text_margin_bottom": 25,
+        "author_size": 10,
+        "author_color": "#5d5b5b",
+        "show_navigation": true,
+        "navigation_gap": 20,
+        "arrow_size": 40,
+        "arrow_font_size": 24,
+        "arrow_bg_color": "rgba(0,0,0,0)",
+        "arrow_color": "#5d5b5b",
+        "arrow_hover_bg_color": "#0000ff1a",
+        "dot_size": 10,
+        "dots_gap": 10,
+        "dot_color": "#d0d0d0",
+        "dot_active_color": "#5d5b5b"
+      }
+    },
+    "rich_text_XLNWYA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_PeYKx6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Every product we offer is selected with care, focusing on quality, comfort and trust.",
+            "heading_size": "h2"
+          }
+        },
+        "text_4L7Dm7": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_awXiXA": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PeYKx6",
+        "text_4L7Dm7",
+        "button_awXiXA"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "hero_banner_dame",
+    "image_hero_banner_xNWNbc",
+    "features_bar_G3UH7a",
+    "image_with_text_jY3CmK",
+    "categories_grid_dame_6KPq43",
+    "bestsellers_slider_dame_N3BKD7",
+    "bestsellers_slider_dame_hEt8rh",
+    "ticker_runner_dame_VaMjDT",
+    "reviews_slider_dame_zXjrYc",
+    "rich_text_XLNWYA"
+  ]
+}

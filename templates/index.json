@@ -45,12 +45,7 @@
           }
         }
       },
-      "block_order": [
-        "feature_1",
-        "feature_2",
-        "feature_3",
-        "feature_4"
-      ],
+      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
       "disabled": true,
       "settings": {
         "max_width": "100%",
@@ -156,8 +151,8 @@
         "enable_overlay": true,
         "overlay_color": "#000000",
         "overlay_opacity": 50,
-        "title": "Intimacy, designed with care",
-        "subtitle": "",
+        "title": "Intimacy, designed with care.",
+        "subtitle": "Premium sexual wellness products for confidence, comfort and connection.",
         "title_size_desktop": 60,
         "title_size_mobile": 40,
         "button_text": "Shop Collection",
@@ -172,74 +167,18 @@
         "button_text_color": "#f8f8f8"
       }
     },
-    "features_bar_G3UH7a": {
-      "type": "features-bar",
-      "blocks": {
-        "feature_NA8CXC": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/delivery-truck-svgrepo-com.svg",
-            "title": "Discreet local delivery (from 1 hour in Greater Vancouver)",
-            "subtitle": ""
-          }
-        },
-        "feature_pmVkJp": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/product-svgrepo-com.svg",
-            "title": "Carefully curated products",
-            "subtitle": ""
-          }
-        },
-        "feature_Yz9b9B": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/supplies-svgrepo-com.svg",
-            "title": "Trusted suppliers",
-            "subtitle": ""
-          }
-        },
-        "feature_ra9UMp": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/privacy-dashboard-svgrepo-com.svg",
-            "title": "Privacy & comfort first",
-            "subtitle": ""
-          }
-        }
-      },
-      "block_order": [
-        "feature_NA8CXC",
-        "feature_pmVkJp",
-        "feature_Yz9b9B",
-        "feature_ra9UMp"
-      ],
-      "name": "Features bar",
-      "settings": {
-        "background_color": "#63616e",
-        "icon_color": "#ffffff",
-        "text_color": "#ffffff",
-        "border_color": "#63616e",
-        "border_radius": 24,
-        "padding_vertical": 40,
-        "padding_horizontal": 0
-      }
-    },
     "image_with_text_jY3CmK": {
       "type": "image-with-text",
       "blocks": {
         "text_gWdjLY": {
           "type": "text",
           "settings": {
-            "text": "<p>MoonVelour was created to redefine how sexual wellness is experienced.<br/>We believe intimacy should feel natural, calm and personal — without pressure, vulgarity or stereotypes. Every product we offer is selected with care, focusing on quality, comfort and trust.</p>",
+            "text": "<p>MoonVelour was created to redefine how sexual wellness is experienced.</p><p>We believe intimacy should feel natural, calm and personal — without pressure, vulgarity or stereotypes. Every product we offer is selected with care, focusing on quality, comfort and trust.</p><p>MoonVelour is about confidence in your own rhythm, respect for privacy and a thoughtful approach to wellbeing.</p>",
             "text_style": "body"
           }
         }
       },
-      "block_order": [
-        "text_gWdjLY"
-      ],
-      "disabled": true,
+      "block_order": ["text_gWdjLY"],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/dark-purple-velour.png",
@@ -345,12 +284,7 @@
           }
         }
       },
-      "block_order": [
-        "category_Ap8LYJ",
-        "category_N7amfj",
-        "category_VjCcE7",
-        "category_yFqkMn"
-      ],
+      "block_order": ["category_Ap8LYJ", "category_N7amfj", "category_VjCcE7", "category_yFqkMn"],
       "name": "Categories Grid Dame",
       "settings": {
         "max_width": "1400px",
@@ -562,6 +496,54 @@
         "discount_badge_color": "#ffffff"
       }
     },
+    "features_bar_G3UH7a": {
+      "type": "features-bar",
+      "blocks": {
+        "feature_NA8CXC": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/delivery-truck-svgrepo-com.svg",
+            "title": "Discreet delivery",
+            "subtitle": ""
+          }
+        },
+        "feature_pmVkJp": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/product-svgrepo-com.svg",
+            "title": "Carefully curated products",
+            "subtitle": ""
+          }
+        },
+        "feature_Yz9b9B": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/supplies-svgrepo-com.svg",
+            "title": "Trusted suppliers",
+            "subtitle": ""
+          }
+        },
+        "feature_ra9UMp": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/privacy-dashboard-svgrepo-com.svg",
+            "title": "Privacy & comfort first",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": ["feature_NA8CXC", "feature_pmVkJp", "feature_Yz9b9B", "feature_ra9UMp"],
+      "name": "Features bar",
+      "settings": {
+        "background_color": "#63616e",
+        "icon_color": "#ffffff",
+        "text_color": "#ffffff",
+        "border_color": "#63616e",
+        "border_radius": 24,
+        "padding_vertical": 40,
+        "padding_horizontal": 0
+      }
+    },
     "ticker_runner_dame_VaMjDT": {
       "type": "ticker-runner-dame",
       "blocks": {
@@ -587,11 +569,7 @@
           }
         }
       },
-      "block_order": [
-        "ticker_item_Jgcjk4",
-        "ticker_item_KKpRxE",
-        "ticker_item_cPAgrY"
-      ],
+      "block_order": ["ticker_item_Jgcjk4", "ticker_item_KKpRxE", "ticker_item_cPAgrY"],
       "disabled": true,
       "name": "Ticker Runner Dame",
       "settings": {
@@ -664,13 +642,7 @@
           }
         }
       },
-      "block_order": [
-        "review_ALzDMB",
-        "review_TEtqbV",
-        "review_VbAmPz",
-        "review_wFCqdC",
-        "review_tWdF66"
-      ],
+      "block_order": ["review_ALzDMB", "review_TEtqbV", "review_VbAmPz", "review_wFCqdC", "review_tWdF66"],
       "disabled": true,
       "name": "Reviews Slider Dame",
       "settings": {
@@ -766,11 +738,8 @@
           }
         }
       },
-      "block_order": [
-        "heading_PeYKx6",
-        "text_4L7Dm7",
-        "button_awXiXA"
-      ],
+      "block_order": ["heading_PeYKx6", "text_4L7Dm7", "button_awXiXA"],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -785,11 +754,11 @@
   "order": [
     "hero_banner_dame",
     "image_hero_banner_xNWNbc",
-    "features_bar_G3UH7a",
     "image_with_text_jY3CmK",
     "categories_grid_dame_6KPq43",
     "bestsellers_slider_dame_N3BKD7",
     "bestsellers_slider_dame_hEt8rh",
+    "features_bar_G3UH7a",
     "ticker_runner_dame_VaMjDT",
     "reviews_slider_dame_zXjrYc",
     "rich_text_XLNWYA"

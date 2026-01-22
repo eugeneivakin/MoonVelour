@@ -32,6 +32,18 @@ if (!customElements.get('product-form')) {
         delete config.headers['Content-Type'];
 
         const formData = new FormData(this.form);
+        
+        // Добавляем выбранные товары из компонента upsell, если он присутствует
+        const upsellItems = this.getUpsellProducts();
+        if (upsellItems.length > 0) {
+          upsellItems.forEach((item, index) => {
+            formData.append(`items[${index}][id]`, item.id);
+            formData.append(`items[${index}][quantity]`, item.quantity);
+          });
+        }
+
+        console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>> formData', formData)
+        
         if (this.cart) {
           formData.append(
             'sections',
@@ -132,6 +144,23 @@ if (!customElements.get('product-form')) {
           this.submitButton.removeAttribute('disabled');
           this.submitButtonText.textContent = window.variantStrings.addToCart;
         }
+      }
+
+      // Собирает выбранные товары из компонента upsell если он присутствует
+      getUpsellProducts() {
+        const productInfoContainer = this.closest('.product__info-container');
+        if (!productInfoContainer) return [];
+
+        const upsellBlock = productInfoContainer.querySelector('.component-products-upsell');
+        if (!upsellBlock) return [];
+
+        const selectedCheckboxes = upsellBlock.querySelectorAll('input[type="checkbox"]:checked');
+        if (selectedCheckboxes.length === 0) return [];
+
+        return Array.from(selectedCheckboxes).map((checkbox) => ({
+          id: checkbox.dataset.variantId,
+          quantity: 1,
+        }));
       }
 
       get variantIdInput() {

@@ -154,30 +154,32 @@
                       -%}
                         <span class="main-product__inventory-limited-icon svg-wrapper" style="color: rgb(238, 148, 65)">
                           {{- 'icon-inventory-status.svg' | inline_asset_content -}}
-                          Limited stock ({{product.selected_or_first_available_variant.inventory_quantity}} remaining)
+                          Limited stock ({{ product.selected_or_first_available_variant.inventory_quantity }} remaining)
                         </span>
-                        {% comment %} {%- if block.settings.show_inventory_quantity -%}
-                          {{-
-                            'products.product.inventory_low_stock_show_count'
-                            | t: quantity: product.selected_or_first_available_variant.inventory_quantity
-                          -}}
-                        {%- else -%}
-                          {{- 'products.product.inventory_low_stock' | t -}}
-                        {%- endif -%} {% endcomment %}
+                        {% comment %}
+                          {%- if block.settings.show_inventory_quantity -%}
+                            {{-
+                              'products.product.inventory_low_stock_show_count'
+                              | t: quantity: product.selected_or_first_available_variant.inventory_quantity
+                            -}}
+                          {%- else -%}
+                            {{- 'products.product.inventory_low_stock' | t -}}
+                          {%- endif -%}
+                        {% endcomment %}
                       {%- else -%}
                         <span class="main-product__inventory-status-icon svg-wrapper" style="color: rgb(62, 214, 96)">
                           {{- 'icon-inventory-status.svg' | inline_asset_content -}}
                           In stock
                         </span>
-                        {% comment %} 
-                        {%- if block.settings.show_inventory_quantity -%}
-                          {{-
-                            'products.product.inventory_in_stock_show_count'
-                            | t: quantity: product.selected_or_first_available_variant.inventory_quantity
-                          -}}
-                        {%- else -%}
-                          {{- 'products.product.inventory_in_stock' | t -}}
-                        {%- endif -%} 
+                        {% comment %}
+                          {%- if block.settings.show_inventory_quantity -%}
+                            {{-
+                              'products.product.inventory_in_stock_show_count'
+                              | t: quantity: product.selected_or_first_available_variant.inventory_quantity
+                            -}}
+                          {%- else -%}
+                            {{- 'products.product.inventory_in_stock' | t -}}
+                          {%- endif -%}
                         {% endcomment %}
                       {%- endif -%}
                     {%- else -%}
@@ -187,7 +189,10 @@
                         </span>
                         {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
                       {%- else -%}
-                        <span class="main-product__inventory-out-of-stock-icon svg-wrapper" style="color: rgb(200, 200, 200)">
+                        <span
+                          class="main-product__inventory-out-of-stock-icon svg-wrapper"
+                          style="color: rgb(200, 200, 200)"
+                        >
                           {{- 'icon-inventory-status.svg' | inline_asset_content -}}
                           {{- 'products.product.inventory_out_of_stock' | t -}}
                         </span>
@@ -232,11 +237,7 @@
                   </details>
                 </div>
               {%- when 'custom_vrt_selector' -%}
-                {% render 'custom_vrt_selector_products',
-                  product: product,
-                  settings: block.settings,
-                  block: block
-               %}
+                {% render 'custom_vrt_selector_products', product: product, settings: block.settings, block: block %}
               {%- when 'quantity_selector' -%}
                 <div
                   id="Quantity-Form-{{ section.id }}"
@@ -684,6 +685,8 @@
                 </product-recommendations>
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
+              {%- when 'upsell' -%}
+                {% render 'products-upsell', product: product, block: block %}
             {%- endcase -%}
           {%- endfor -%}
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -2099,6 +2102,41 @@
           "default": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.default",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "upsell",
+      "name": "Upsell products",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "upsell_heading",
+          "default": "Recommended products",
+          "label": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "upsell_source",
+          "label": "Source",
+          "options": [
+            {
+              "value": "shopify",
+              "label": "Shopify"
+            },
+            {
+              "value": "metafield",
+              "label": "Metafield"
+            }
+          ],
+          "default": "metafield"
+        },
+        {
+          "type": "number",
+          "id": "upsell_products_limit",
+          "label": "Maximum products to show",
+          "default": 3
         }
       ]
     }

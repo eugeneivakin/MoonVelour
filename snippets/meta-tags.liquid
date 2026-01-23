@@ -1,12 +1,12 @@
 {%- liquid
   assign og_title = page_title | default: shop.name
-  
+
   unless og_title contains shop.name
     if request.page_type != 'index'
       assign og_title = og_title | append: ' - ' | append: shop.name
     endif
   endunless
-  
+
   assign og_title = og_title | truncate: 70
   assign og_url = canonical_url | default: request.origin
   assign og_type = 'website'
@@ -37,6 +37,10 @@
 {%- if request.page_type == 'product' -%}
   <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
   <meta property="og:price:currency" content="{{ cart.currency.iso_code }}">
+  <meta
+    name="description"
+    content="{{ page_description | escape }}"
+  >
 {%- endif -%}
 
 {%- if settings.social_twitter_link != blank -%}

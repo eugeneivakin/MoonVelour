@@ -83,11 +83,11 @@
                   {% endif %}
 
                   {% if product.available == false %}
-                    <button class="dame-product-button dame-btn-sold-out" disabled>
+                    <button class="button" disabled>
                       {{ section.settings.sold_out_text | default: "SOLD OUT" }} | {{ product.price | money }}
                     </button>
                   {% else %}
-                    <button class="dame-product-button dame-btn-add-to-cart"
+                    <button class="button"
                             data-product-id="{{ product.id }}"
                             onclick="window.location.href='{{ product.url }}'">
                       {{ section.settings.add_to_cart_text | default: "ADD TO CART" }} | {{ product.price | money }}
@@ -155,6 +155,7 @@
   }
 
   #bestsellers-{{ section.id }} .dame-bestsellers-header {
+    max-width: none;
     margin-bottom: {{ section.settings.header_margin_bottom }}px;
   }
 
@@ -227,6 +228,7 @@
   }
 
   #bestsellers-{{ section.id }} .dame-slider-container {
+    max-width: none;
     position: relative;
     overflow: visible;
   }
@@ -448,7 +450,7 @@
     transform: scale(1.1);
   }
 
-  #bestsellers-{{ section.id }} .dame-product-button {
+  /* #bestsellers-{{ section.id }} .dame-product-button {
     width: 100%;
     padding: 16px;
     border: none;
@@ -458,23 +460,23 @@
     letter-spacing: 1.5px;
     cursor: pointer;
     transition: all 0.3s;
-  }
+  } */
 
-  #bestsellers-{{ section.id }} .dame-btn-add-to-cart {
+  /* #bestsellers-{{ section.id }} .dame-btn-add-to-cart {
     background-color: var(--dame-bestsellers-button-bg);
     color: var(--dame-bestsellers-button-text-color);
-  }
+  } */
 
-  #bestsellers-{{ section.id }} .dame-btn-add-to-cart:hover {
+  /* #bestsellers-{{ section.id }} .dame-btn-add-to-cart:hover {
     opacity: 0.9;
     transform: translateY(-2px);
-  }
+  } */
 
-  #bestsellers-{{ section.id }} .dame-btn-sold-out {
+  /* #bestsellers-{{ section.id }} .dame-btn-sold-out {
     background-color: {{ section.settings.sold_out_button_bg }};
     color: {{ section.settings.sold_out_button_color }};
     cursor: not-allowed;
-  }
+  } */
 
   #bestsellers-{{ section.id }} .dame-product-price {
     margin-top: 5px;

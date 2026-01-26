@@ -47,7 +47,11 @@
                 {% endif %}
 
                 {% if block.settings.button_text != blank %}
-                  <span class="dame-category-shop-btn" style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }}; border-color: {{ block.settings.button_bg_color }};">
+                  {% comment %} <span class="dame-category-shop-btn" style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }}; border-color: {{ block.settings.button_bg_color }};">
+                    {{ block.settings.button_text }}
+                    <span class="dame-shop-arrow">→</span>
+                  </span> {% endcomment %}
+                  <span class="button">
                     {{ block.settings.button_text }}
                     <span class="dame-shop-arrow">→</span>
                   </span>
@@ -62,15 +66,15 @@
 
 <style>
   :root {
-    --dame-categories-max-width: {{ section.settings.max_width }};
+    /* --dame-categories-max-width: {{ section.settings.max_width }}; */
     --dame-categories-padding-top-desktop: {{ section.settings.padding_top_desktop }}px;
     --dame-categories-padding-bottom-desktop: {{ section.settings.padding_bottom_desktop }}px;
     --dame-categories-padding-top-mobile: {{ section.settings.padding_top_mobile }}px;
     --dame-categories-padding-bottom-mobile: {{ section.settings.padding_bottom_mobile }}px;
-    --dame-categories-padding-left-desktop: {{ section.settings.padding_left_desktop }}px;
-    --dame-categories-padding-right-desktop: {{ section.settings.padding_right_desktop }}px;
-    --dame-categories-padding-left-mobile: {{ section.settings.padding_left_mobile }}px;
-    --dame-categories-padding-right-mobile: {{ section.settings.padding_right_mobile }}px;
+    /* --dame-categories-padding-left-desktop: {{ section.settings.padding_left_desktop }}px;
+    --dame-categories-padding-right-desktop: {{ section.settings.padding_right_desktop }}px; */
+    /* --dame-categories-padding-left-mobile: {{ section.settings.padding_left_mobile }}px;
+    --dame-categories-padding-right-mobile: {{ section.settings.padding_right_mobile }}px; */
     --dame-categories-section-title-size-desktop: {{ section.settings.section_title_size_desktop }}px;
     --dame-categories-section-title-size-mobile: {{ section.settings.section_title_size_mobile }}px;
     --dame-categories-section-title-color: {{ section.settings.section_title_color }};
@@ -94,23 +98,23 @@
     background-color: {{ section.settings.section_background_color }};
     padding-top: var(--dame-categories-padding-top-desktop);
     padding-bottom: var(--dame-categories-padding-bottom-desktop);
-    padding-left: var(--dame-categories-padding-left-desktop);
-    padding-right: var(--dame-categories-padding-right-desktop);
+    /* padding-left: var(--dame-categories-padding-left-desktop);
+    padding-right: var(--dame-categories-padding-right-desktop); */
   }
 
   @media screen and (max-width: 749px) {
     .categories-grid-wrapper {
       padding-top: var(--dame-categories-padding-top-mobile);
       padding-bottom: var(--dame-categories-padding-bottom-mobile);
-      padding-left: var(--dame-categories-padding-left-mobile);
-      padding-right: var(--dame-categories-padding-right-mobile);
+      /* padding-left: var(--dame-categories-padding-left-mobile);
+      padding-right: var(--dame-categories-padding-right-mobile); */
     }
   }
 </style>
 
 <style>
   #categories-{{ section.id }} .dame-categories-section {
-    max-width: var(--dame-categories-max-width);
+    /* max-width: var(--dame-categories-max-width); */
     margin: 0 auto;
   }
 
@@ -179,10 +183,10 @@
   }
 
   #categories-{{ section.id }} .dame-card-bg-image .dame-category-header,
-  #categories-{{ section.id }} .dame-card-bg-image .dame-category-shop-btn {
+  /* #categories-{{ section.id }} .dame-card-bg-image .dame-category-shop-btn {
     position: relative;
     z-index: 2;
-  }
+  } */
 
   #categories-{{ section.id }} .dame-category-header {
     position: relative;
@@ -240,7 +244,15 @@
     max-height: {{ section.settings.icon_max_height }}px;
   }
 
-  #categories-{{ section.id }} .dame-category-shop-btn {
+   #categories-{{ section.id }} .button {
+    font-size: 1.2rem;
+    z-index: 5;
+    {% if section.settings.button_hover_show %}
+      opacity: 0;
+      transform: translateY(10px);
+    {% endif %}
+   }
+  /* #categories-{{ section.id }} .dame-category-shop-btn {
     display: inline-block;
     padding: 12px 30px;
     border-radius: 25px;
@@ -255,11 +267,8 @@
     pointer-events: auto;
     position: relative;
     cursor: pointer;
-    {% if section.settings.button_hover_show %}
-      opacity: 0;
-      transform: translateY(10px);
-    {% endif %}
-  }
+    
+  } */
 
   #categories-{{ section.id }} .dame-shop-arrow {
     display: inline-block;
@@ -267,20 +276,20 @@
     transition: all 0.3s ease;
   }
 
-  #categories-{{ section.id }} .dame-category-card:hover .dame-category-shop-btn {
+  #categories-{{ section.id }} .dame-category-card:hover .button {
     {% if section.settings.button_hover_show %}
       opacity: 1;
       transform: translateY(0);
     {% endif %}
   }
 
-  #categories-{{ section.id }} .dame-category-shop-btn:hover {
+  /* #categories-{{ section.id }} .dame-category-shop-btn:hover {
     transform: translateY(-2px);
-  }
+  } */
 
-  #categories-{{ section.id }} .dame-category-shop-btn:hover .dame-shop-arrow {
+  /* #categories-{{ section.id }} .dame-category-shop-btn:hover .dame-shop-arrow {
     transform: translateX(4px);
-  }
+  } */
 
 
   @media screen and (max-width: 989px) and (min-width: 750px) {
@@ -322,12 +331,12 @@
       max-height: {{ section.settings.icon_max_height_mobile }}px;
     }
 
-    #categories-{{ section.id }} .dame-category-shop-btn {
+    /* #categories-{{ section.id }} .dame-category-shop-btn {
       padding: 10px 24px;
       font-size: 12px;
       opacity: 1;
       transform: translateY(0);
-    }
+    } */
   }
 
   /* Fade-in animation */
@@ -406,13 +415,13 @@
       "type": "header",
       "content": "Section Settings"
     },
-    {
-      "type": "text",
-      "id": "max_width",
-      "label": "Section Max Width",
-      "default": "1400px",
-      "info": "Example: 1400px or 100%"
-    },
+    // {
+    //   "type": "text",
+    //   "id": "max_width",
+    //   "label": "Section Max Width",
+    //   "default": "1400px",
+    //   "info": "Example: 1400px or 100%"
+    // },
     {
       "type": "color",
       "id": "section_background_color",
@@ -449,26 +458,26 @@
       "label": "Padding Bottom Desktop",
       "default": 80
     },
-    {
-      "type": "range",
-      "id": "padding_left_desktop",
-      "min": 0,
-      "max": 200,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Left Desktop",
-      "default": 52
-    },
-    {
-      "type": "range",
-      "id": "padding_right_desktop",
-      "min": 0,
-      "max": 200,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Right Desktop",
-      "default": 52
-    },
+    // {
+    //   "type": "range",
+    //   "id": "padding_left_desktop",
+    //   "min": 0,
+    //   "max": 200,
+    //   "step": 4,
+    //   "unit": "px",
+    //   "label": "Padding Left Desktop",
+    //   "default": 52
+    // },
+    // {
+    //   "type": "range",
+    //   "id": "padding_right_desktop",
+    //   "min": 0,
+    //   "max": 200,
+    //   "step": 4,
+    //   "unit": "px",
+    //   "label": "Padding Right Desktop",
+    //   "default": 52
+    // },
     {
       "type": "header",
       "content": "Padding Mobile"
@@ -493,26 +502,26 @@
       "label": "Padding Bottom Mobile",
       "default": 60
     },
-    {
-      "type": "range",
-      "id": "padding_left_mobile",
-      "min": 0,
-      "max": 200,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Left Mobile",
-      "default": 20
-    },
-    {
-      "type": "range",
-      "id": "padding_right_mobile",
-      "min": 0,
-      "max": 200,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Right Mobile",
-      "default": 20
-    },
+    // {
+    //   "type": "range",
+    //   "id": "padding_left_mobile",
+    //   "min": 0,
+    //   "max": 200,
+    //   "step": 4,
+    //   "unit": "px",
+    //   "label": "Padding Left Mobile",
+    //   "default": 20
+    // },
+    // {
+    //   "type": "range",
+    //   "id": "padding_right_mobile",
+    //   "min": 0,
+    //   "max": 200,
+    //   "step": 4,
+    //   "unit": "px",
+    //   "label": "Padding Right Mobile",
+    //   "default": 20
+    // },
     {
       "type": "header",
       "content": "Section Title"

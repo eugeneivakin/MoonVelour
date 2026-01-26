@@ -1,17 +1,30 @@
-<div id="image-hero-{{ section.id }}" class="image-hero-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}">
-  <div class="image-hero-container">
+<div
+  id="image-hero-{{ section.id }}"
+  class="image-hero-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}"
+>
+  <div class="page-width">
     <div class="image-hero-banner">
       {% if section.settings.desktop_image != blank or section.settings.mobile_image != blank %}
         <div class="image-hero-media">
           {% if section.settings.desktop_image != blank %}
             <div class="image-hero-desktop">
-              {{ section.settings.desktop_image | image_url: width: 3840 | image_tag: loading: 'lazy', class: 'image-hero-img', alt: section.settings.desktop_image.alt | escape }}
+              {{
+                section.settings.desktop_image
+                | image_url: width: 3840
+                | image_tag: loading: 'lazy', class: 'image-hero-img', alt: section.settings.desktop_image.alt
+                | escape
+              }}
             </div>
           {% endif %}
 
           {% if section.settings.mobile_image != blank %}
             <div class="image-hero-mobile">
-              {{ section.settings.mobile_image | image_url: width: 1500 | image_tag: loading: 'lazy', class: 'image-hero-img', alt: section.settings.mobile_image.alt | escape }}
+              {{
+                section.settings.mobile_image
+                | image_url: width: 1500
+                | image_tag: loading: 'lazy', class: 'image-hero-img', alt: section.settings.mobile_image.alt
+                | escape
+              }}
             </div>
           {% endif %}
 
@@ -28,7 +41,7 @@
             <div class="image-hero-subtitle">{{ section.settings.subtitle }}</div>
           {% endif %}
           {% if section.settings.button_text != blank %}
-            <a href="{{ section.settings.button_url }}" class="image-hero-button">
+            <a href="{{ section.settings.button_url }}" class="button">
               {{ section.settings.button_text }}
             </a>
           {% endif %}
@@ -44,11 +57,6 @@
     padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
   }
 
-  #image-hero-{{ section.id }} .image-hero-container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
   .image-hero-subtitle{
     color: white;
     font-size: 20px;
@@ -58,7 +66,7 @@
   #image-hero-{{ section.id }} .image-hero-banner {
     position: relative;
     min-height: {{ section.settings.min_height_desktop }}px;
-    border-radius: {{ section.settings.border_radius }}px;
+    border-radius: var(--media-radius);
     overflow: hidden;
   }
 
@@ -202,7 +210,7 @@
     letter-spacing: -0.5px;
   }
 
-  #image-hero-{{ section.id }} .image-hero-button {
+  /* #image-hero-{{ section.id }} .image-hero-button {
     display: inline-block;
     padding: 12px 32px;
     background-color: {{ section.settings.button_bg_color }};
@@ -221,7 +229,7 @@
   #image-hero-{{ section.id }} .image-hero-button:hover {
     opacity: 0.9;
     transform: translateY(-2px);
-  }
+  } */
 
   @media screen and (max-width: 749px) {
     #image-hero-{{ section.id }} {
@@ -384,16 +392,6 @@
       "default": 500
     },
     {
-      "type": "range",
-      "id": "border_radius",
-      "min": 0,
-      "max": 40,
-      "step": 4,
-      "unit": "px",
-      "label": "Border Radius",
-      "default": 20
-    },
-    {
       "type": "header",
       "content": "Overlay"
     },
@@ -434,7 +432,7 @@
     {
       "type": "text",
       "id": "subtitle",
-      "label": "Subtitle",
+      "label": "Subtitle"
     },
     {
       "type": "range",
@@ -580,7 +578,7 @@
       "id": "text_color",
       "label": "Text Color",
       "default": "#FFFFFF"
-    },
+    } /*,
     {
       "type": "color",
       "id": "button_bg_color",
@@ -592,7 +590,7 @@
       "id": "button_text_color",
       "label": "Button Text Color",
       "default": "#000000"
-    }
+    }*/
   ],
   "presets": [
     {

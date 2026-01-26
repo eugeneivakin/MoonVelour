@@ -49,6 +49,20 @@
             "links": "For Her|/collections/gifting||For Him|/collections/self-care||Couples|/collections/couples||Self-care|/collections/for-beginners"
           }
         },
+        "link_column_mPcedJ": {
+          "type": "link_column",
+          "settings": {
+            "column_title": "For her",
+            "links": "Vibrators|/collections/vibrators||Self-care|/collections/for-beginners"
+          }
+        },
+        "link_column_ay6qNF": {
+          "type": "link_column",
+          "settings": {
+            "column_title": "For him",
+            "links": "Masturbators|/collections/masturbators||Self-care|/collections/for-beginners"
+          }
+        },
         "copyright_jtF9D7": {
           "type": "copyright",
           "settings": {
@@ -57,7 +71,16 @@
           }
         }
       },
-      "block_order": ["link_column_h4kgKX", "link_column_9qBEhm", "link_column_Qce8z7", "link_column_iaWWzt", "link_column_xtUHB6", "copyright_jtF9D7"],
+      "block_order": [
+        "link_column_h4kgKX",
+        "link_column_9qBEhm",
+        "link_column_Qce8z7",
+        "link_column_iaWWzt",
+        "link_column_xtUHB6",
+        "link_column_mPcedJ",
+        "link_column_ay6qNF",
+        "copyright_jtF9D7"
+      ],
       "custom_css": [".bg-custom {background: #f7f7f7;}"],
       "name": "Footer Dame",
       "settings": {

@@ -1,4 +1,7 @@
-<div id="categories-{{ section.id }}" class="page-width categories-grid-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}">
+<div
+  id="categories-{{ section.id }}"
+  class="page-width categories-grid-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}"
+>
   <section class="dame-categories-section">
     {% if section.settings.show_section_title and section.settings.section_title != blank %}
       <div class="dame-categories-header">
@@ -11,20 +14,29 @@
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'category' %}
-              <a href="{{ block.settings.button_url }}" class="dame-category-card {% if block.settings.use_image_as_background %}dame-card-bg-image{% endif %}" {{ block.shopify_attributes }}
+              <a
+                href="{{ block.settings.button_url }}"
+                class="dame-category-card {% if block.settings.use_image_as_background %}dame-card-bg-image{% endif %}"
+                {{ block.shopify_attributes }}
                 {% if block.settings.use_image_as_background and block.settings.category_image != blank %}
                   style="background-image: url('{{ block.settings.category_image | image_url: width: 800 }}');"
                 {% else %}
                   style="background-color: {{ block.settings.card_bg_color }};"
-                {% endif %}>
-
+                {% endif %}
+              >
                 {% if block.settings.use_image_as_background and block.settings.show_overlay %}
-                  <div class="dame-category-overlay" style="display: block; background-color: {{ block.settings.overlay_color }}; opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};"></div>
+                  <div
+                    class="dame-category-overlay"
+                    style="display: block; background-color: {{ block.settings.overlay_color }}; opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};"
+                  ></div>
                 {% endif %}
 
                 <div class="dame-category-header">
                   {% if block.settings.badge_text != blank %}
-                    <span class="dame-category-badge" style="background-color: {{ block.settings.badge_bg_color }}; color: {{ block.settings.badge_text_color }};">
+                    <span
+                      class="dame-category-badge"
+                      style="background-color: {{ block.settings.badge_bg_color }}; color: {{ block.settings.badge_text_color }};"
+                    >
                       {{ block.settings.badge_text }}
                     </span>
                   {% endif %}
@@ -39,7 +51,12 @@
                 {% if block.settings.use_image_as_background == false %}
                   <div class="dame-category-image">
                     {% if block.settings.category_image != blank %}
-                      {{ block.settings.category_image | image_url: width: 600 | image_tag: loading: 'lazy', class: 'dame-category-img', alt: block.settings.category_image.alt | escape }}
+                      {{
+                        block.settings.category_image
+                        | image_url: width: 600
+                        | image_tag: loading: 'lazy', class: 'dame-category-img', alt: block.settings.category_image.alt
+                        | escape
+                      }}
                     {% elsif block.settings.category_icon != blank %}
                       <div class="dame-category-icon">{{ block.settings.category_icon }}</div>
                     {% endif %}
@@ -47,10 +64,12 @@
                 {% endif %}
 
                 {% if block.settings.button_text != blank %}
-                  {% comment %} <span class="dame-category-shop-btn" style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }}; border-color: {{ block.settings.button_bg_color }};">
-                    {{ block.settings.button_text }}
-                    <span class="dame-shop-arrow">→</span>
-                  </span> {% endcomment %}
+                  {% comment %}
+                    <span class="dame-category-shop-btn" style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }}; border-color: {{ block.settings.button_bg_color }};">
+                      {{ block.settings.button_text }}
+                      <span class="dame-shop-arrow">→</span>
+                    </span>
+                  {% endcomment %}
                   <span class="button">
                     {{ block.settings.button_text }}
                     <span class="dame-shop-arrow">→</span>
@@ -85,7 +104,7 @@
     --dame-categories-columns-mobile: {{ section.settings.columns_mobile }};
     --dame-categories-card-min-height: {{ section.settings.card_min_height }}px;
     --dame-categories-card-padding: {{ section.settings.card_padding }}px;
-    --dame-categories-card-border-radius: {{ section.settings.card_border_radius }}px;
+    /* --dame-categories-card-border-radius: {{ section.settings.card_border_radius }}px; */
     --dame-categories-badge-font-size-desktop: {{ section.settings.badge_font_size_desktop }}px;
     --dame-categories-badge-font-size-mobile: {{ section.settings.badge_font_size_mobile }}px;
     --dame-categories-title-font-size-desktop: {{ section.settings.title_font_size_desktop }}px;
@@ -138,7 +157,7 @@
 
   #categories-{{ section.id }} .dame-category-card {
     position: relative;
-    border-radius: var(--dame-categories-card-border-radius);
+    border-radius: var(--media-radius);
     overflow: hidden;
     min-height: var(--dame-categories-card-min-height);
     display: flex;
@@ -267,7 +286,7 @@
     pointer-events: auto;
     position: relative;
     cursor: pointer;
-    
+
   } */
 
   #categories-{{ section.id }} .dame-shop-arrow {
@@ -378,31 +397,31 @@
 </style>
 
 <script>
-(function() {
-  const cards = document.querySelectorAll('#categories-{{ section.id }} .dame-category-card');
+  (function () {
+    const cards = document.querySelectorAll('#categories-{{ section.id }} .dame-category-card');
 
-  if (!cards.length) return;
+    if (!cards.length) return;
 
-  // IntersectionObserver to detect when cards enter viewport
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+    // IntersectionObserver to detect when cards enter viewport
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px',
+    };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-        observer.unobserve(entry.target); // Stop observing once animated
-      }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target); // Stop observing once animated
+        }
+      });
+    }, observerOptions);
+
+    // Observe all cards
+    cards.forEach((card) => {
+      observer.observe(card);
     });
-  }, observerOptions);
-
-  // Observe all cards
-  cards.forEach(card => {
-    observer.observe(card);
-  });
-})();
+  })();
 </script>
 
 {% schema %}
@@ -716,16 +735,16 @@
       "label": "Card Padding Mobile",
       "default": 20
     },
-    {
-      "type": "range",
-      "id": "card_border_radius",
-      "min": 0,
-      "max": 50,
-      "step": 5,
-      "unit": "px",
-      "label": "Card Border Radius",
-      "default": 20
-    },
+    // {
+    //   "type": "range",
+    //   "id": "card_border_radius",
+    //   "min": 0,
+    //   "max": 50,
+    //   "step": 5,
+    //   "unit": "px",
+    //   "label": "Card Border Radius",
+    //   "default": 20
+    // },
     {
       "type": "header",
       "content": "Badge Settings"

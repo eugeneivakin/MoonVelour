@@ -1,4 +1,7 @@
-<div id="bestsellers-{{ section.id }}" class="bestsellers-slider-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}">
+<div
+  id="bestsellers-{{ section.id }}"
+  class="bestsellers-slider-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}"
+>
   <section class="dame-bestsellers-section">
     <div class="page-width dame-bestsellers-header">
       <div class="dame-bestsellers-header-content">
@@ -46,12 +49,21 @@
                 <a href="{{ product.url }}" class="dame-product-image-link">
                   <div class="dame-product-image">
                     {% if product.featured_image %}
-                      {{ product.featured_image | image_url: width: 600 | image_tag: loading: 'lazy', class: 'dame-product-img', alt: product.featured_image.alt | escape }}
+                      {{
+                        product.featured_image
+                        | image_url: width: 600
+                        | image_tag: loading: 'lazy', class: 'dame-product-img', alt: product.featured_image.alt
+                        | escape
+                      }}
                     {% else %}
                       {{ 'product-1' | placeholder_svg_tag: 'dame-product-placeholder' }}
                     {% endif %}
                     {% if product.compare_at_price > product.price %}
-                      {% assign discount = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price %}
+                      {% assign discount = product.compare_at_price
+                        | minus: product.price
+                        | times: 100
+                        | divided_by: product.compare_at_price
+                      %}
                       <span class="dame-discount-badge-overlay">-{{ discount }}% OFF</span>
                     {% endif %}
                   </div>
@@ -67,14 +79,17 @@
                     <a href="{{ product.url }}">{{ product.title }}</a>
                   </h3>
 
-
                   {% if product.has_only_default_variant == false %}
                     <div class="dame-product-options">
                       {% for option in product.options_with_values %}
                         {% if option.name == 'Color' or option.name == 'Цвет' %}
                           <div class="dame-color-swatches">
                             {% for value in option.values %}
-                              <span class="dame-color-swatch" style="background-color: {{ value | handle }};" title="{{ value }}"></span>
+                              <span
+                                class="dame-color-swatch"
+                                style="background-color: {{ value | handle }};"
+                                title="{{ value }}"
+                              ></span>
                             {% endfor %}
                           </div>
                         {% endif %}
@@ -84,13 +99,15 @@
 
                   {% if product.available == false %}
                     <button class="button" disabled>
-                      {{ section.settings.sold_out_text | default: "SOLD OUT" }} | {{ product.price | money }}
+                      {{ section.settings.sold_out_text | default: 'SOLD OUT' }} | {{ product.price | money }}
                     </button>
                   {% else %}
-                    <button class="button"
-                            data-product-id="{{ product.id }}"
-                            onclick="window.location.href='{{ product.url }}'">
-                      {{ section.settings.add_to_cart_text | default: "ADD TO CART" }} | {{ product.price | money }}
+                    <button
+                      class="button"
+                      data-product-id="{{ product.id }}"
+                      onclick="window.location.href='{{ product.url }}'"
+                    >
+                      {{ section.settings.add_to_cart_text | default: 'ADD TO CART' }} | {{ product.price | money }}
                     </button>
                   {% endif %}
                 </div>
@@ -319,7 +336,8 @@
     display: block;
     width: 100%;
     overflow: hidden;
-    border-radius: {{ section.settings.image_border_radius | default: 16 }}px;
+    border-radius: var(--media-radius);
+    /* border-radius: {{ section.settings.image_border_radius | default: 16 }}px; */
   }
 
   #bestsellers-{{ section.id }} .dame-product-image {
@@ -692,61 +710,61 @@
 </script>
 
 {% if section.settings.animate_bold_words %}
-<script>
-(function() {
-  const titleElement = document.querySelector('#bestsellers-{{ section.id }} .dame-bestsellers-title');
+  <script>
+    (function () {
+      const titleElement = document.querySelector('#bestsellers-{{ section.id }} .dame-bestsellers-title');
 
-  if (!titleElement) return;
+      if (!titleElement) return;
 
-  // Find all bold words (strong or b tags)
-  const boldWords = titleElement.querySelectorAll('strong, b');
+      // Find all bold words (strong or b tags)
+      const boldWords = titleElement.querySelectorAll('strong, b');
 
-  if (!boldWords.length) return;
+      if (!boldWords.length) return;
 
-  // Inject SVG scribble into each bold word
-  boldWords.forEach(function(boldElement) {
-    // Make sure the bold element has position: relative for the SVG
-    boldElement.style.position = 'relative';
-    boldElement.style.display = 'inline-block';
+      // Inject SVG scribble into each bold word
+      boldWords.forEach(function (boldElement) {
+        // Make sure the bold element has position: relative for the SVG
+        boldElement.style.position = 'relative';
+        boldElement.style.display = 'inline-block';
 
-    // Create SVG element
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('class', 'bold-word-svg');
-    svg.setAttribute('viewBox', '0 0 100 10');
-    svg.setAttribute('stroke', 'currentColor');
-    svg.setAttribute('fill', 'none');
-    svg.setAttribute('preserveAspectRatio', 'none');
+        // Create SVG element
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('class', 'bold-word-svg');
+        svg.setAttribute('viewBox', '0 0 100 10');
+        svg.setAttribute('stroke', 'currentColor');
+        svg.setAttribute('fill', 'none');
+        svg.setAttribute('preserveAspectRatio', 'none');
 
-    // Create path element with hand-drawn wavy underline
-    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('stroke-linejoin', 'round');
-    path.setAttribute('stroke-linecap', 'round');
-    path.setAttribute('stroke-width', '1.5');
-    path.setAttribute('pathLength', '1');
-    path.setAttribute('d', 'M2,6 C15,3 25,7 40,5 C55,3 70,8 85,5 C92,3 97,5 98,6');
+        // Create path element with hand-drawn wavy underline
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('stroke-linejoin', 'round');
+        path.setAttribute('stroke-linecap', 'round');
+        path.setAttribute('stroke-width', '1.5');
+        path.setAttribute('pathLength', '1');
+        path.setAttribute('d', 'M2,6 C15,3 25,7 40,5 C55,3 70,8 85,5 C92,3 97,5 98,6');
 
-    svg.appendChild(path);
-    boldElement.appendChild(svg);
-  });
+        svg.appendChild(path);
+        boldElement.appendChild(svg);
+      });
 
-  // IntersectionObserver to detect when section enters viewport
-  const observerOptions = {
-    threshold: 0.2,
-    rootMargin: '0px 0px -100px 0px'
-  };
+      // IntersectionObserver to detect when section enters viewport
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px',
+      };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        titleElement.classList.add('animate-words');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            titleElement.classList.add('animate-words');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
 
-  observer.observe(titleElement);
-})();
-</script>
+      observer.observe(titleElement);
+    })();
+  </script>
 {% endif %}
 
 {% schema %}

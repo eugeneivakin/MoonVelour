@@ -18,11 +18,31 @@
 }
 
 .card-product--upsell {
+  cursor: pointer;
   display: grid;
   grid-template-columns: min-content 70px 1fr;
   grid-template-rows: auto;
   gap: 0.75rem;
   align-items: center;
+  position: relative;
+
+  input[type="checkbox"] {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .fake-checkbox {
+    border: 1px solid rgb(var(--color-button));
+    display: block;
+    height: 2rem;
+    width: 2rem;
+
+    &:has(:checked) {
+      background: rgb(var(--color-button));
+    }
+  }
 
   .card-product__media-wrapper {
     aspect-ratio: 1 / 1;

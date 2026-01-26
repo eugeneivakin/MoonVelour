@@ -175,7 +175,7 @@
 @media screen and (min-width: 750px) {
   .image-with-text__grid--reverse .image-with-text__content {
     margin-left: auto;
-    padding-left: 0;
+    /* padding-left: 0; */
   }
 
   .image-with-text__content--bottom {

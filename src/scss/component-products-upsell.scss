@@ -34,13 +34,29 @@
   }
 
   .fake-checkbox {
-    border: 1px solid rgb(var(--color-button));
-    display: block;
+    border: 1px solid rgb(var(--color-shadow));
+    color: rgb(var(--color-button-text));
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     height: 2rem;
+    padding: 0.2rem;
     width: 2rem;
 
     &:has(:checked) {
-      background: rgb(var(--color-button));
+      background: rgb(var(--color-shadow));
+
+      svg {
+        display: inline;
+      }
+    }
+
+    svg {
+      display: none;
+      fill: currentColor;
     }
   }
 

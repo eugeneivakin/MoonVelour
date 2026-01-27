@@ -158,7 +158,7 @@
           "button": "#7850ca",
           "button_label": "#f8f8f8",
           "secondary_button_label": "#7850ca",
-          "shadow": "#7850ca"
+          "shadow": "#624c63"
         }
       },
       "scheme-2": {
@@ -174,7 +174,7 @@
       },
       "scheme-3": {
         "settings": {
-          "background": "#7850ca",
+          "background": "#624c63",
           "background_gradient": "",
           "text": "#f8f8f8",
           "button": "#f8f8f8",

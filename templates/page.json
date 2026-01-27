@@ -31,7 +31,6 @@
     },
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -59,6 +58,7 @@
         "heading_V6MrnL",
         "text_jRqEVq"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Generated_Image_December_28_2025_-_4_32PM_1.jpg",

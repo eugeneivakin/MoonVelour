@@ -20,53 +20,99 @@
     "collapsible_content_xQztbW": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_KMtcNj": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Will my order be shipped discreetly?",
-            "icon": "question_mark",
-            "row_content": "<p><strong>Yes.</strong> All orders are shipped in plain, unbranded packaging with no indication of the contents or store name. Your privacy is our top priority.</p>",
-            "page": ""
-          }
-        },
         "collapsible_row_db9raR": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What materials are your products made from?",
+            "heading": "How fast is delivery in Greater Vancouver?",
             "icon": "question_mark",
-            "row_content": "<p>Our products are made from body-safe, non-toxic materials, such as medical-grade silicone, ABS plastic, or stainless steel. Each product description includes detailed material information.</p>",
+            "row_content": "<p>We offer express local delivery across Greater Vancouver.<br/><br/>Estimated delivery time is <strong>60–120 minutes</strong>, depending on location, traffic, and external conditions.</p>",
             "page": ""
           }
         },
         "collapsible_row_Px3bGd": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are your products safe to use?",
+            "heading": "Do you offer overnight delivery?",
             "icon": "question_mark",
-            "row_content": "<p>Yes. All products sold in our store are designed for safe use when used as directed. We recommend carefully reading the instructions and cleaning the product before and after each use.</p>",
+            "row_content": "<p>Yes. Overnight express delivery is available in select areas.<br/><br/>Pricing depends on distance and time window and will be shown at checkout.</p>",
             "page": ""
           }
         },
-        "collapsible_row_CGnpjR": {
+        "collapsible_row_LQFxnx": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Can I return or exchange an intimate product?",
+            "heading": "Is your delivery discreet?",
             "icon": "question_mark",
-            "row_content": "<p>Due to hygiene and safety reasons, intimate products are final sale and cannot be returned or exchanged once opened. If your item arrives damaged or defective, please contact us and we will assist you.</p>",
+            "row_content": "<p>Absolutely. All orders are delivered in <strong>plain, unmarked packaging</strong>.<br/><br/>Our couriers never disclose the contents of your order.</p>",
             "page": ""
           }
         },
-        "collapsible_row_YnBN3Q": {
+        "collapsible_row_6NraE3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do you ship internationally?",
+            "heading": "What areas do you deliver to?",
             "icon": "question_mark",
-            "row_content": "<p>Yes, we offer international shipping to selected countries. Delivery times and customs fees may vary depending on your location.</p>",
+            "row_content": "<p>We deliver across <strong>Greater Vancouver</strong> and selected surrounding regions, including parts of the Fraser Valley and Sea-to-Sky Corridor.<br/><br/>A full list of delivery zones and pricing is available on our Delivery Policy page.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_niNbar": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I return intimate products?",
+            "icon": "question_mark",
+            "row_content": "<p>Due to hygiene and safety reasons, <strong>intimate products and sex toys are final sale</strong> and cannot be returned or exchanged unless they are defective.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UyJXG6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I return intimate products?",
+            "icon": "question_mark",
+            "row_content": "<p>Due to hygiene and safety reasons, <strong>intimate products and sex toys are final sale</strong> and cannot be returned or exchanged unless they are defective.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GYzQUD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if my item arrives damaged or defective?",
+            "icon": "question_mark",
+            "row_content": "<p>If you receive a defective item, please contact us within <strong>7 days of delivery</strong> with your order number and photos.<br/><br/>Approved defective items will be replaced.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6f76Bq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is my privacy protected?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes. We respect your privacy at every step — from discreet packaging to secure handling of your personal information.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_TFAip7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need to confirm my age to shop?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes. Our store is intended for customers <strong>18 years and older</strong>.<br/><br/>By using this website, you confirm that you meet the legal age requirement.</p>",
             "page": ""
           }
         }
       },
-      "block_order": ["collapsible_row_KMtcNj", "collapsible_row_db9raR", "collapsible_row_Px3bGd", "collapsible_row_CGnpjR", "collapsible_row_YnBN3Q"],
+      "block_order": [
+        "collapsible_row_db9raR",
+        "collapsible_row_Px3bGd",
+        "collapsible_row_LQFxnx",
+        "collapsible_row_6NraE3",
+        "collapsible_row_niNbar",
+        "collapsible_row_UyJXG6",
+        "collapsible_row_GYzQUD",
+        "collapsible_row_6f76Bq",
+        "collapsible_row_TFAip7"
+      ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
@@ -84,5 +130,8 @@
       }
     }
   },
-  "order": ["main", "collapsible_content_xQztbW"]
+  "order": [
+    "main",
+    "collapsible_content_xQztbW"
+  ]
 }

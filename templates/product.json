@@ -57,6 +57,15 @@
             "upsell_products_limit": 3
           }
         },
+        "collapsible_tab_BXzqaT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Delivery information",
+            "icon": "box",
+            "content": "<p>Fast & Discreet Local Delivery 24/7 service</p><p>Express delivery in Greater Vancouver from $20</p><ul><li>60–120 minutes delivery time</li><li>Overnight delivery available</li><li>Plain, unmarked packaging for complete privacy</li></ul><p>Fast. Discreet. Local.</p>",
+            "page": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -78,6 +87,7 @@
         "quantity_selector",
         "inventory_wyeyDL",
         "upsell_EhWcpy",
+        "collapsible_tab_BXzqaT",
         "buy_buttons",
         "description"
       ],
@@ -110,7 +120,9 @@
           }
         }
       },
-      "block_order": ["judge_me_reviews_review_widget_pcNfCC"],
+      "block_order": [
+        "judge_me_reviews_review_widget_pcNfCC"
+      ],
       "settings": {
         "include_margins": true
       }
@@ -134,5 +146,9 @@
       }
     }
   },
-  "order": ["main", "17691767675e5f3705", "related-products"]
+  "order": [
+    "main",
+    "17691767675e5f3705",
+    "related-products"
+  ]
 }

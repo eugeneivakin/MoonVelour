@@ -55,7 +55,10 @@
           }
         }
       },
-      "block_order": ["heading_V6MrnL", "text_jRqEVq"],
+      "block_order": [
+        "heading_V6MrnL",
+        "text_jRqEVq"
+      ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Generated_Image_December_28_2025_-_4_32PM_1.jpg",
@@ -72,101 +75,11 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "about_us_mission_GLUg9c": {
-      "type": "about-us-mission",
-      "blocks": {
-        "value_mgBLGY": {
-          "type": "value",
-          "disabled": true,
-          "settings": {
-            "icon": "",
-            "title": "Value Title",
-            "text": "<p>Value description</p>"
-          }
-        },
-        "value_7tKAfR": {
-          "type": "value",
-          "disabled": true,
-          "settings": {
-            "icon": "",
-            "title": "Value Title",
-            "text": "<p>Value description</p>"
-          }
-        },
-        "value_NHYDcf": {
-          "type": "value",
-          "disabled": true,
-          "settings": {
-            "icon": "",
-            "title": "Value Title",
-            "text": "<p>Value description</p>"
-          }
-        }
-      },
-      "block_order": ["value_mgBLGY", "value_7tKAfR", "value_NHYDcf"],
-      "name": "About Us Mission",
-      "settings": {
-        "mission_image": "shopify://shop_images/Generated_Image_December_28_2025_-_4_32PM_1.jpg",
-        "image_ratio": "square",
-        "caption": "Our Mission",
-        "heading": "What We Stand For",
-        "heading_size": "h1",
-        "text": "<p>Our mission is to deliver exceptional products and services that enrich the lives of our customers while maintaining the highest standards of quality and integrity.</p>",
-        "color_scheme": "",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "about_us_stats_XYVwjX": {
-      "type": "about-us-stats",
-      "blocks": {
-        "stat_nJjnQh": {
-          "type": "stat",
-          "settings": {
-            "number": "100",
-            "suffix": "",
-            "label": "Stat Label"
-          }
-        },
-        "stat_KY9eyc": {
-          "type": "stat",
-          "settings": {
-            "number": "100",
-            "suffix": "",
-            "label": "Stat Label"
-          }
-        },
-        "stat_7nNitE": {
-          "type": "stat",
-          "settings": {
-            "number": "100",
-            "suffix": "",
-            "label": "Stat Label"
-          }
-        },
-        "stat_bh8HXJ": {
-          "type": "stat",
-          "settings": {
-            "number": "100",
-            "suffix": "",
-            "label": "Stat Label"
-          }
-        }
-      },
-      "block_order": ["stat_nJjnQh", "stat_KY9eyc", "stat_7nNitE", "stat_bh8HXJ"],
-      "name": "About Us Stats",
-      "settings": {
-        "heading": "By The Numbers",
-        "heading_size": "h1",
-        "text": "<p>Our achievements speak for themselves.</p>",
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "color_scheme": "",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
     }
   },
-  "order": ["about_us_hero_ptKMCV", "main", "image_with_text_kM3ipt", "about_us_mission_GLUg9c", "about_us_stats_XYVwjX"]
+  "order": [
+    "about_us_hero_ptKMCV",
+    "main",
+    "image_with_text_kM3ipt"
+  ]
 }

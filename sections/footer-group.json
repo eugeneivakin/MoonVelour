@@ -25,7 +25,7 @@
           "type": "link_column",
           "settings": {
             "column_title": "About",
-            "links": "About MoonVelour|/pages/about-us||Contact Us|/pages/contact||Store Locator|/pages/stores||Careers|/pages/careers||Press|/pages/press"
+            "links": "About us|/pages/about-us||Contact Us|/pages/contact||Store Locator|/pages/stores||Careers|/pages/careers||Press|/pages/press"
           }
         },
         "link_column_Qce8z7": {

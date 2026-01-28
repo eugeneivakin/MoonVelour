@@ -18,14 +18,14 @@
           "type": "link_column",
           "settings": {
             "column_title": "Product",
-            "links": "Shop|/collections/all||Returns|/policies/refund-policy||FAQs|/pages/faq||Rewards|/pages/rewards||Refer A Friend|/pages/refer"
+            "links": "Shop|/collections/all||Refund Policy|/pages/refund-policy||FAQ|/pages/faq||Rewards|/pages/rewards||Refer A Friend|/pages/refer"
           }
         },
         "link_column_9qBEhm": {
           "type": "link_column",
           "settings": {
             "column_title": "About",
-            "links": "About Us|/pages/about-us||Contact Us|/pages/contact||Store Locator|/pages/stores||Careers|/pages/careers||Press|/pages/press"
+            "links": "About us|/pages/about-us||Contact Us|/pages/contact||Store Locator|/pages/stores||Careers|/pages/careers||Press|/pages/press"
           }
         },
         "link_column_Qce8z7": {
@@ -39,7 +39,7 @@
           "type": "link_column",
           "settings": {
             "column_title": "Terms",
-            "links": "Terms & Conditions|/policies/terms-of-service||Privacy Policy|/policies/privacy-policy||Patent Info|/pages/patent||Shipping policy|/policies/shipping-policy"
+            "links": "Terms & Conditions|/policies/terms-of-service||Privacy Policy|/policies/privacy-policy||Patent Info|/pages/patent||Delivery Policy & Delivery Area|/pages/delivery-policy-delivery-area"
           }
         },
         "link_column_xtUHB6": {
@@ -47,20 +47,6 @@
           "settings": {
             "column_title": "Collections",
             "links": "For Her|/collections/gifting||For Him|/collections/self-care||Couples|/collections/couples||Self-care|/collections/for-beginners"
-          }
-        },
-        "link_column_mPcedJ": {
-          "type": "link_column",
-          "settings": {
-            "column_title": "For her",
-            "links": "Vibrators|/collections/vibrators||Self-care|/collections/for-beginners"
-          }
-        },
-        "link_column_ay6qNF": {
-          "type": "link_column",
-          "settings": {
-            "column_title": "For him",
-            "links": "Masturbators|/collections/masturbators||Self-care|/collections/for-beginners"
           }
         },
         "copyright_jtF9D7": {
@@ -77,11 +63,11 @@
         "link_column_Qce8z7",
         "link_column_iaWWzt",
         "link_column_xtUHB6",
-        "link_column_mPcedJ",
-        "link_column_ay6qNF",
         "copyright_jtF9D7"
       ],
-      "custom_css": [".bg-custom {background: #f7f7f7;}"],
+      "custom_css": [
+        ".bg-custom {background: #f7f7f7;}"
+      ],
       "name": "Footer Dame",
       "settings": {
         "max_width": "1400px",
@@ -165,5 +151,8 @@
       }
     }
   },
-  "order": ["footer_dame_pdgg9b", "footer"]
+  "order": [
+    "footer_dame_pdgg9b",
+    "footer"
+  ]
 }

@@ -18,14 +18,6 @@
             "text_style": "uppercase"
           }
         },
-        "vendor": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "11111",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -57,17 +49,21 @@
             "show_inventory_quantity": true
           }
         },
-        "custom_vrt_selector_nnVfqL": {
-          "type": "custom_vrt_selector",
-          "disabled": true,
-          "settings": {}
-        },
         "upsell_EhWcpy": {
           "type": "upsell",
           "settings": {
             "upsell_heading": "Recommended products",
             "upsell_source": "metafield",
             "upsell_products_limit": 3
+          }
+        },
+        "collapsible_tab_BXzqaT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Delivery information",
+            "icon": "box",
+            "content": "<p>Fast & Discreet Local Delivery 24/7 service</p><p>Express delivery in Greater Vancouver from $20</p><ul><li>60–120 minutes delivery time</li><li>Overnight delivery available</li><li>Plain, unmarked packaging for complete privacy</li></ul><p>Fast. Discreet. Local.</p>",
+            "page": ""
           }
         },
         "buy_buttons": {
@@ -80,28 +76,20 @@
         "description": {
           "type": "description",
           "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
         "sku_PC7XUf",
-        "vendor",
         "title",
         "judge_me_reviews_preview_badge_Qqh8XV",
         "price",
         "variant_picker",
         "quantity_selector",
         "inventory_wyeyDL",
-        "custom_vrt_selector_nnVfqL",
         "upsell_EhWcpy",
+        "collapsible_tab_BXzqaT",
         "buy_buttons",
-        "description",
-        "share"
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -132,7 +120,9 @@
           }
         }
       },
-      "block_order": ["judge_me_reviews_review_widget_pcNfCC"],
+      "block_order": [
+        "judge_me_reviews_review_widget_pcNfCC"
+      ],
       "settings": {
         "include_margins": true
       }
@@ -156,5 +146,9 @@
       }
     }
   },
-  "order": ["main", "17691767675e5f3705", "related-products"]
+  "order": [
+    "main",
+    "17691767675e5f3705",
+    "related-products"
+  ]
 }

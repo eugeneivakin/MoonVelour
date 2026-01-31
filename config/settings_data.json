@@ -147,6 +147,11 @@
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {}
+      },
+      "2252613488580418660": {
+        "type": "shopify://apps/dingdoong-delivery-date/blocks/app-embed-block./65ab0a55-83b7-43d0-839b-31ed27b3a16d",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {

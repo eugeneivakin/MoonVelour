@@ -18,7 +18,7 @@
           "type": "link_column",
           "settings": {
             "column_title": "Product",
-            "links": "Shop|/collections/all||Refund Policy|/pages/refund-policy||FAQ|/pages/faq||Rewards|/pages/rewards||Refer A Friend|/pages/refer"
+            "links": "Shop|/collections/all||Refund Policy|/policies/refund-policy||FAQ|/pages/faq||Rewards|/pages/rewards||Refer A Friend|/pages/refer"
           }
         },
         "link_column_9qBEhm": {
@@ -39,7 +39,7 @@
           "type": "link_column",
           "settings": {
             "column_title": "Terms",
-            "links": "Terms & Conditions|/policies/terms-of-service||Privacy Policy|/policies/privacy-policy||Patent Info|/pages/patent||Delivery Policy & Delivery Area|/pages/delivery-policy-delivery-area"
+            "links": "Terms & Conditions|/policies/terms-of-service||Privacy Policy|/policies/privacy-policy||Patent Info|/pages/patent||Delivery Policy & Delivery Area|/policies/shipping-policy"
           }
         },
         "link_column_xtUHB6": {

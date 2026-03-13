@@ -1,0 +1,260 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-facets.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+
+<div class="section-{{ section.id }}-padding">
+  {%- paginate collection.products by section.settings.products_per_page -%}
+    <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
+      {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+        <aside class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
+          {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type, paginate: paginate %}
+        </aside>
+      {%- endif -%}
+
+      <div class="product-grid-container" id="ProductGridContainer">
+        {%- if collection.products.size == 0 -%}
+          <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+            <div class="loading-overlay gradient"></div>
+            <div class="title-wrapper center">
+              <h2 class="title title--primary">{{ 'sections.collection_template.empty' | t }}<br>{{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: 'underlined-link link' }}</h2>
+            </div>
+          </div>
+        {%- else -%}
+          <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
+            <div class="loading-overlay gradient"></div>
+            <div id="product-grid" data-id="{{ section.id }}" class="dame-cg-grid">
+              {%- for product in collection.products -%}
+                <div class="dame-cg-card">
+                  <a href="{{ product.url }}" class="dame-cg-img-link{% if product.images[1] %} dame-cg-has-swap{% endif %}">
+                    <div class="dame-cg-img-wrap">
+                      {% if product.featured_image %}
+                        {{ product.featured_image | image_url: width: 600 | image_tag: loading: 'lazy', class: 'dame-cg-img dame-cg-img--primary' }}
+                        {% if product.images[1] %}
+                          {{ product.images[1] | image_url: width: 600 | image_tag: loading: 'lazy', class: 'dame-cg-img dame-cg-img--hover' }}
+                        {% endif %}
+                      {% else %}
+                        {{ 'product-1' | placeholder_svg_tag: 'dame-cg-placeholder' }}
+                      {% endif %}
+                      {% if product.compare_at_price > product.price %}
+                        {% assign disc = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price %}
+                        <span class="dame-cg-disc">-{{ disc }}%</span>
+                      {% endif %}
+                    </div>
+                  </a>
+                  <div class="dame-cg-info">
+                    <div class="dame-cg-stars-row"><span class="jdgm-widget jdgm-preview-badge" data-id="{{ product.id }}"></span></div>
+                    <h3 class="dame-cg-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+                    {% if product.available == false %}
+                      <button class="dame-cg-btn dame-cg-btn--sold" disabled>SOLD OUT | {{ product.price | money }}</button>
+                    {% else %}
+                      <button class="dame-cg-btn dame-cg-btn--cart" data-variant-id="{{ product.first_available_variant.id }}" data-product-url="{{ product.url }}" data-variant-count="{{ product.variants.size }}" data-product-title="{{ product.title | escape }}">ADD TO CART | {{ product.price | money }}</button>
+                    {% endif %}
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+            {%- if paginate.pages > 1 -%}{% render 'pagination', paginate: paginate, anchor: '' %}{%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endpaginate -%}
+</div>
+
+<style>
+.section-{{ section.id }}-padding{padding-top:{{ section.settings.padding_top | times: 0.75 }}px;padding-bottom:{{ section.settings.padding_bottom | times: 0.75 }}px}
+@media(min-width:750px){.section-{{ section.id }}-padding{padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px}}
+.dame-cg-grid{display:grid;grid-template-columns:repeat({{ section.settings.columns_desktop }},1fr);gap:24px}
+@media(max-width:989px){.dame-cg-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:749px){.dame-cg-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
+.dame-cg-card{display:flex;flex-direction:column;gap:14px;transition:transform .3s}
+.dame-cg-card:hover{transform:translateY(-5px)}
+.dame-cg-img-link{display:block;overflow:hidden;border-radius:16px}
+.dame-cg-img-wrap{width:100%;aspect-ratio:3/4;overflow:hidden;position:relative;background:#f5f5f5;display:flex;align-items:center;justify-content:center}
+.dame-cg-img,.dame-cg-placeholder{width:100%;height:100%;object-fit:cover;transition:opacity .4s ease,transform .4s}
+.dame-cg-img--hover{position:absolute;top:0;left:0;opacity:0}
+.dame-cg-has-swap:hover .dame-cg-img--primary{opacity:0}
+.dame-cg-img-link:hover .dame-cg-img--hover{opacity:1}
+.dame-cg-img-link:hover .dame-cg-img{transform:scale(1.03)}
+.dame-cg-disc{position:absolute;top:10px;right:10px;background:#ff4444;color:#fff;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;z-index:2}
+.dame-cg-info{display:flex;flex-direction:column;gap:10px;flex-grow:1}
+.dame-cg-stars-row{display:flex;align-items:center;gap:8px}
+.dame-cg-stars-icon{color:#edbf2e;font-size:14px;letter-spacing:2px}
+.dame-cg-rev-count{font-size:12px;color:#666}
+.dame-cg-title{font-size:18px;margin:0;font-weight:500;line-height:1.3}
+@media(max-width:749px){.dame-cg-title{font-size:15px}}
+.dame-cg-title a{color:#000;text-decoration:none}
+.dame-cg-title a:hover{opacity:.8}
+.dame-cg-btn{width:100%;padding:14px;border:none;border-radius:8px;font-size:12px;text-transform:uppercase;letter-spacing:1.5px;cursor:pointer;transition:all .3s;font-weight:400;margin-top:auto}
+.dame-cg-btn--cart{background:#7850ca;color:#fff}
+.dame-cg-btn--cart:hover{opacity:.9;transform:translateY(-2px)}
+.dame-cg-btn--sold{background:#b8b3e8;color:#fff;cursor:not-allowed}
+
+@keyframes dame-spin{to{transform:rotate(360deg)}}
+.dame-spinner{animation:dame-spin .6s linear infinite}
+</style>
+
+
+<!-- Quick Buy Popup -->
+<div id="dame-quick-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,.5);align-items:center;justify-content:center">
+  <div style="background:#fff;border-radius:16px;max-width:420px;width:90%;padding:28px;position:relative;max-height:80vh;overflow-y:auto">
+    <button id="dame-qp-close" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#666">&times;</button>
+    <h3 id="dame-qp-title" style="margin:0 0 16px;font-size:18px;font-weight:500;padding-right:30px"></h3>
+    <div id="dame-qp-options"></div>
+    <button id="dame-qp-add" class="dame-cg-btn dame-cg-btn--cart" style="margin-top:16px">ADD TO CART</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var popup = document.getElementById('dame-quick-popup');
+  var closeBtn = document.getElementById('dame-qp-close');
+  var titleEl = document.getElementById('dame-qp-title');
+  var optionsEl = document.getElementById('dame-qp-options');
+  var addBtn = document.getElementById('dame-qp-add');
+  var selectedVariantId = null;
+
+  function addToCart(variantId, btn) {
+    var origHTML = btn.innerHTML;
+    btn.innerHTML = '<svg class="dame-spinner" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="50 20" stroke-linecap="round"/></svg>';
+    btn.disabled = true;
+    btn.style.display = 'flex';
+    btn.style.alignItems = 'center';
+    btn.style.justifyContent = 'center';
+
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: [{ id: variantId, quantity: 1 }] })
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(item) {
+      // Close quick popup if open
+      if (popup && popup.style.display === 'flex') {
+        popup.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+      // Fetch updated cart drawer sections
+      return fetch('/?sections=cart-drawer,cart-icon-bubble');
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(sections) {
+      // Update cart drawer contents
+      var drawerEl = document.getElementById('CartDrawer');
+      if (drawerEl) {
+        var parsed = new DOMParser().parseFromString(sections['cart-drawer'], 'text/html');
+        var newInner = parsed.querySelector('#CartDrawer');
+        if (newInner) drawerEl.innerHTML = newInner.innerHTML;
+      }
+      // Update cart icon bubble
+      var bubbleEl = document.getElementById('cart-icon-bubble');
+      if (bubbleEl) {
+        var parsed2 = new DOMParser().parseFromString(sections['cart-icon-bubble'], 'text/html');
+        var newBubble = parsed2.querySelector('.shopify-section');
+        if (newBubble) bubbleEl.innerHTML = newBubble.innerHTML;
+      }
+      // Open cart drawer
+      var cartDrawer = document.querySelector('cart-drawer');
+      if (cartDrawer) {
+        cartDrawer.classList.remove('is-empty');
+        var cdi = cartDrawer.querySelector('cart-drawer-items');
+        if (cdi) cdi.classList.remove('is-empty');
+        cartDrawer.classList.add('animate', 'active');
+        document.body.classList.add('overflow-hidden');
+        // Re-bind overlay close
+        var overlay = cartDrawer.querySelector('#CartDrawer-Overlay');
+        if (overlay) overlay.addEventListener('click', function() { cartDrawer.close(); });
+      }
+      // Reset button
+      btn.innerHTML = origHTML;
+      btn.disabled = false;
+      btn.style.display = '';
+    })
+    .catch(function() {
+      btn.innerHTML = 'ERROR';
+      setTimeout(function() { btn.innerHTML = origHTML; btn.disabled = false; btn.style.display = ''; }, 1500);
+    });
+  }
+
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('.dame-cg-btn--cart');
+    if (!btn) return;
+    e.preventDefault();
+    var variantCount = parseInt(btn.dataset.variantCount);
+    var variantId = btn.dataset.variantId;
+    if (variantCount <= 1) {
+      addToCart(variantId, btn);
+    } else {
+      fetch(btn.dataset.productUrl + '.js')
+        .then(function(r) { return r.json(); })
+        .then(function(product) {
+          titleEl.textContent = product.title;
+          optionsEl.innerHTML = '';
+          selectedVariantId = product.variants[0].id;
+          product.options.forEach(function(opt, oi) {
+            var label = document.createElement('label');
+            label.style.cssText = 'display:block;margin-bottom:12px;font-size:14px;font-weight:500';
+            label.textContent = opt.name;
+            var select = document.createElement('select');
+            select.style.cssText = 'width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;margin-top:6px;font-size:14px';
+            select.dataset.optionIndex = oi;
+            opt.values.forEach(function(v) {
+              var o = document.createElement('option');
+              o.value = v; o.textContent = v;
+              select.appendChild(o);
+            });
+            select.addEventListener('change', function() {
+              var selected = [];
+              optionsEl.querySelectorAll('select').forEach(function(s) { selected.push(s.value); });
+              var match = product.variants.find(function(v) {
+                return v.options.every(function(o, i) { return o === selected[i]; });
+              });
+              if (match) selectedVariantId = match.id;
+            });
+            label.appendChild(select);
+            optionsEl.appendChild(label);
+          });
+          popup.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        });
+    }
+  });
+
+  if (addBtn) addBtn.addEventListener('click', function() {
+    if (selectedVariantId) addToCart(selectedVariantId, addBtn);
+  });
+  if (closeBtn) closeBtn.addEventListener('click', function() {
+    popup.style.display = 'none'; document.body.style.overflow = '';
+  });
+  if (popup) popup.addEventListener('click', function(e) {
+    if (e.target === popup) { popup.style.display = 'none'; document.body.style.overflow = ''; }
+  });
+})();
+</script>
+
+<!-- Quick Buy Popup -->
+<div id="dame-quick-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,.5);align-items:center;justify-content:center">
+  <div style="background:#fff;border-radius:16px;max-width:420px;width:90%;padding:28px;position:relative;max-height:80vh;overflow-y:auto">
+    <button id="dame-qp-close" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#666">&times;</button>
+    <h3 id="dame-qp-title" style="margin:0 0 16px;font-size:18px;font-weight:500;padding-right:30px"></h3>
+    <div id="dame-qp-options"></div>
+    <button id="dame-qp-add" class="dame-cg-btn dame-cg-btn--cart" style="margin-top:16px">ADD TO CART</button>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Dame Collection Grid",
+  "class": "section",
+  "settings": [
+    {"type":"range","id":"products_per_page","min":8,"max":36,"step":4,"default":16,"label":"Products per page"},
+    {"type":"range","id":"columns_desktop","min":2,"max":6,"step":1,"default":4,"label":"Columns desktop"},
+    {"type":"color_scheme","id":"color_scheme","label":"Color scheme","default":"scheme-1"},
+    {"type":"checkbox","id":"enable_filtering","default":true,"label":"Enable filtering"},
+    {"type":"select","id":"filter_type","options":[{"value":"horizontal","label":"Horizontal"},{"value":"vertical","label":"Vertical"},{"value":"drawer","label":"Drawer"}],"default":"horizontal","label":"Filter type"},
+    {"type":"checkbox","id":"enable_sorting","default":true,"label":"Enable sorting"},
+    {"type":"range","id":"padding_top","min":0,"max":100,"step":4,"unit":"px","label":"Padding top","default":36},
+    {"type":"range","id":"padding_bottom","min":0,"max":100,"step":4,"unit":"px","label":"Padding bottom","default":36}
+  ]
+}
+{% endschema %}

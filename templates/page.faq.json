@@ -1,0 +1,149 @@
+{
+  "sections": {
+    "delivery_faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "q1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How fast is delivery in Greater Vancouver?",
+            "icon": "truck",
+            "row_content": "<p>We offer express local delivery across Greater Vancouver. Estimated delivery time is 60–120 minutes, depending on location, traffic, and external conditions.</p>",
+            "page": ""
+          }
+        },
+        "q2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer overnight delivery?",
+            "icon": "truck",
+            "row_content": "<p>Yes. Overnight express delivery is available in select areas. Pricing depends on distance and time window and will be shown at checkout.</p>",
+            "page": ""
+          }
+        },
+        "q3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is your delivery discreet?",
+            "icon": "lock",
+            "row_content": "<p>Absolutely. All orders are delivered in plain, unmarked packaging. Our couriers never disclose the contents of your order.</p>",
+            "page": ""
+          }
+        },
+        "q4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What areas do you deliver to?",
+            "icon": "globe",
+            "row_content": "<p>We deliver across Greater Vancouver and selected surrounding regions, including parts of the Fraser Valley and Sea-to-Sky Corridor. A full list of delivery zones and pricing is available on our <a href=\"/pages/shipping-policy\">Delivery Policy</a> page.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Delivery",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "returns_faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "q5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I return intimate products?",
+            "icon": "return",
+            "row_content": "<p>Due to hygiene and safety reasons, intimate products and sex toys are final sale and cannot be returned or exchanged unless they are defective.</p>",
+            "page": ""
+          }
+        },
+        "q6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if my item arrives damaged or defective?",
+            "icon": "question_mark",
+            "row_content": "<p>If you receive a defective item, please contact us within 7 days of delivery with your order number and photos. Approved defective items will be replaced.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "q5",
+        "q6"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Returns & Refunds",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "privacy_faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "q7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is my privacy protected?",
+            "icon": "lock",
+            "row_content": "<p>Yes. We respect your privacy at every step — from discreet packaging to secure handling of your personal information.</p>",
+            "page": ""
+          }
+        },
+        "q8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need to confirm my age to shop?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes. Our store is intended for customers 18 years and older. By using this website, you confirm that you meet the legal age requirement.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "q7",
+        "q8"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Privacy & Age",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "delivery_faq",
+    "returns_faq",
+    "privacy_faq"
+  ]
+}

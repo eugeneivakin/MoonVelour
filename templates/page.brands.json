@@ -1,0 +1,129 @@
+{
+  "sections": {
+    "brands_grid": {
+      "type": "brands-grid-dame",
+      "blocks": {
+        "brand_0": {
+          "type": "brand",
+          "settings": {
+            "collection": "california-exotics"
+          }
+        },
+        "brand_1": {
+          "type": "brand",
+          "settings": {
+            "collection": "doc-johnson"
+          }
+        },
+        "brand_2": {
+          "type": "brand",
+          "settings": {
+            "collection": "intimina"
+          }
+        },
+        "brand_3": {
+          "type": "brand",
+          "settings": {
+            "collection": "jimmy-jane"
+          }
+        },
+        "brand_4": {
+          "type": "brand",
+          "settings": {
+            "collection": "lelo"
+          }
+        },
+        "brand_5": {
+          "type": "brand",
+          "settings": {
+            "collection": "ns-novelties"
+          }
+        },
+        "brand_6": {
+          "type": "brand",
+          "settings": {
+            "collection": "nu-sensuelle"
+          }
+        },
+        "brand_7": {
+          "type": "brand",
+          "settings": {
+            "collection": "pipedream"
+          }
+        },
+        "brand_8": {
+          "type": "brand",
+          "settings": {
+            "collection": "romp"
+          }
+        },
+        "brand_9": {
+          "type": "brand",
+          "settings": {
+            "collection": "satisfyer"
+          }
+        },
+        "brand_10": {
+          "type": "brand",
+          "settings": {
+            "collection": "shots"
+          }
+        },
+        "brand_11": {
+          "type": "brand",
+          "settings": {
+            "collection": "sliquid"
+          }
+        },
+        "brand_12": {
+          "type": "brand",
+          "settings": {
+            "collection": "tenga"
+          }
+        },
+        "brand_13": {
+          "type": "brand",
+          "settings": {
+            "collection": "we-vibe"
+          }
+        },
+        "brand_14": {
+          "type": "brand",
+          "settings": {
+            "collection": "womanizer"
+          }
+        }
+      },
+      "block_order": [
+        "brand_0",
+        "brand_1",
+        "brand_2",
+        "brand_3",
+        "brand_4",
+        "brand_5",
+        "brand_6",
+        "brand_7",
+        "brand_8",
+        "brand_9",
+        "brand_10",
+        "brand_11",
+        "brand_12",
+        "brand_13",
+        "brand_14"
+      ],
+      "settings": {
+        "section_title": "Our Brands",
+        "section_subtitle": "",
+        "title_color": "#6B2D5B",
+        "bg_color": "#faf8f9",
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "brands_grid"
+  ]
+}

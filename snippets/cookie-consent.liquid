@@ -1,0 +1,78 @@
+{% comment %}
+  Cookie consent banner — lightweight, GDPR-friendly
+  Insert before </body> in layout/theme.liquid
+{% endcomment %}
+
+{% unless request.design_mode %}
+<style>
+  .mv-cookie-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99998;
+    background: #1a1a1a;
+    color: #f0f0f0;
+    padding: 16px 24px;
+    font-family: var(--font-body-family, sans-serif);
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.15);
+  }
+  .mv-cookie-banner.is-visible { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .mv-cookie-banner__text { flex: 1; min-width: 240px; }
+  .mv-cookie-banner__text a { color: #c9a0dc; text-decoration: underline; }
+  .mv-cookie-banner__actions { display: flex; gap: 10px; flex-shrink: 0; }
+  .mv-cookie-btn {
+    appearance: none; border: none; border-radius: 10px; padding: 10px 20px;
+    font: inherit; font-weight: 600; cursor: pointer; transition: all .2s;
+  }
+  .mv-cookie-btn--accept { background: var(--mv-brand-primary, #6B2D5B); color: #fff; }
+  .mv-cookie-btn--accept:hover { background: var(--mv-brand-accent, #8B3A6E); }
+  .mv-cookie-btn--decline { background: transparent; color: #ccc; border: 1px solid #555; }
+  .mv-cookie-btn--decline:hover { border-color: #999; color: #fff; }
+  @media (max-width: 600px) {
+    .mv-cookie-banner { flex-direction: column; text-align: center; padding: 14px 16px; }
+    .mv-cookie-banner__actions { width: 100%; justify-content: center; }
+  }
+</style>
+
+<div id="MvCookieBanner" class="mv-cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="mv-cookie-banner__text">
+    We use cookies to enhance your experience. By continuing to browse, you agree to our
+    <a href="/pages/privacy-policy">Privacy Policy</a>.
+  </div>
+  <div class="mv-cookie-banner__actions">
+    <button class="mv-cookie-btn mv-cookie-btn--accept" data-cookie-accept>Accept</button>
+    <button class="mv-cookie-btn mv-cookie-btn--decline" data-cookie-decline>Decline</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY = 'mv_cookie_consent';
+  var consent = null;
+  try { consent = localStorage.getItem(KEY); } catch(e){}
+  if (!consent) {
+    var m = document.cookie.match(new RegExp('(^|; )' + KEY + '=([^;]*)'));
+    if (m) consent = decodeURIComponent(m[2]);
+  }
+  if (consent) return;
+
+  var banner = document.getElementById('MvCookieBanner');
+  if (!banner) return;
+  setTimeout(function(){ banner.classList.add('is-visible'); }, 1500);
+
+  function save(val) {
+    try { localStorage.setItem(KEY, val); } catch(e){}
+    document.cookie = KEY + '=' + val + '; path=/; max-age=' + (365*24*60*60) + '; samesite=lax';
+    banner.classList.remove('is-visible');
+  }
+  document.addEventListener('click', function(e){
+    if (e.target.closest('[data-cookie-accept]')) { e.preventDefault(); save('accepted'); }
+    if (e.target.closest('[data-cookie-decline]')) { e.preventDefault(); save('declined'); }
+  });
+})();
+</script>
+{% endunless %}

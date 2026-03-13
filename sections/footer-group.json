@@ -1,0 +1,159 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer_dame_pdgg9b": {
+      "type": "footer-dame",
+      "blocks": {
+        "link_column_h4kgKX": {
+          "type": "link_column",
+          "settings": {
+            "column_title": "Shop",
+            "links": "All Products|/collections/all||New Arrivals|/collections/new-arrivals||Best Sellers|/collections/best-sellers||Sale|/collections/sale"
+          }
+        },
+        "link_column_9qBEhm": {
+          "type": "link_column",
+          "settings": {
+            "column_title": "Categories",
+            "links": "Vibrators|/collections/vibrators||Lubricants|/collections/lubricants||Anal Toys|/collections/anal-toys||BDSM|/collections/bdsm||Lingerie|/collections/lingerie"
+          }
+        },
+        "link_column_Qce8z7": {
+          "type": "link_column",
+          "settings": {
+            "column_title": "Brands",
+            "links": "LELO|/collections/lelo||Doc Johnson|/collections/doc-johnson||California Exotics|/collections/california-exotics||NS Novelties|/collections/ns-novelties||Pipedream|/collections/pipedream||View All Brands|/pages/brands"
+          }
+        },
+        "link_column_iaWWzt": {
+          "type": "link_column",
+          "settings": {
+            "column_title": "Information",
+            "links": "About Us|/pages/about-us||Contact|/pages/contact||FAQ|/pages/faq||Shipping Policy|/pages/shipping-policy||Refund Policy|/pages/refund-policy||Privacy Policy|/pages/privacy-policy"
+          }
+        },
+        "copyright_jtF9D7": {
+          "type": "copyright",
+          "settings": {
+            "column_title": "Copyright",
+            "copyright_text": "<p>MoonVelour, Inc<br/>© 2026</p>"
+          }
+        },
+        "link_column_custcare": {
+          "type": "link_column",
+          "settings": {
+            "column_title": "Customer Care",
+            "links": "Track Order|/pages/track-order||Discreet Shipping|/pages/discreet-shipping||Secure Payments|/pages/secure-payments"
+          }
+        }
+      },
+      "block_order": [
+        "link_column_h4kgKX",
+        "link_column_9qBEhm",
+        "link_column_Qce8z7",
+        "link_column_iaWWzt",
+        "link_column_custcare",
+        "copyright_jtF9D7"
+      ],
+      "custom_css": [
+        ".bg-custom {background: #f7f7f7;}"
+      ],
+      "name": "Footer Dame",
+      "settings": {
+        "max_width": "1400px",
+        "section_background_gradient": "",
+        "circle_1_size": 600,
+        "circle_1_gradient": "",
+        "circle_1_top": -200,
+        "circle_1_left": -100,
+        "circle_2_size": 800,
+        "circle_2_gradient": "",
+        "circle_2_bottom": -300,
+        "circle_2_right": -200,
+        "custom_classes": "bg-custom",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_left_desktop": 52,
+        "padding_right_desktop": 52,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "show_newsletter": true,
+        "newsletter_title": "<p>Subscribe to our emails</p>",
+        "newsletter_title_size_desktop": 40,
+        "newsletter_title_size_mobile": 32,
+        "newsletter_title_color": "#624c63",
+        "newsletter_title_font_weight": "500",
+        "input_background_color": "#f5f5f5",
+        "input_border_width": 1,
+        "input_border_color": "#624c63",
+        "input_border_radius": 40,
+        "input_padding_vertical": 20,
+        "input_padding_horizontal": 40,
+        "email_placeholder": "Email",
+        "input_font_size": 22,
+        "input_text_color": "#000000",
+        "input_placeholder_color": "#999999",
+        "submit_button_text": "Submit",
+        "button_font_size": 16,
+        "button_text_color": "#ffffff",
+        "success_message": "Thank you for subscribing!",
+        "success_bg_color": "#d4edda",
+        "success_text_color": "#155724",
+        "error_bg_color": "#f3f3f3",
+        "error_text_color": "#721c24",
+        "links_padding_top": 60,
+        "columns_desktop": 6,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "columns_gap": 40,
+        "columns_gap_mobile": 30,
+        "column_title_size": 13,
+        "column_title_color": "#624c63",
+        "column_title_font_weight": "600",
+        "column_title_margin_bottom": 20,
+        "link_size": 13,
+        "link_color": "#624c63",
+        "link_hover_color": "#624c63",
+        "copyright_text_size": 13,
+        "copyright_text_color": "#624c63",
+        "dot_size": 10,
+        "dot_color": "#7850ca"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "quote_above_footer": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align:center;padding:48px 20px;max-width:800px;margin:0 auto\"><p style=\"font-size:22px;font-style:italic;color:#624c63;line-height:1.6;font-weight:300;letter-spacing:0.5px;margin:0\">&ldquo;Every product we offer is selected with care, focusing on quality, comfort and trust&rdquo;</p></div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "quote_above_footer",
+    "footer_dame_pdgg9b",
+    "footer"
+  ]
+}

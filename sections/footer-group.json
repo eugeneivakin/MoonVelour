@@ -8,42 +8,42 @@
         "link_column_h4kgKX": {
           "type": "link_column",
           "settings": {
-            "column_title": "Shop",
+            "heading": "Shop",
             "links": "All Products|/collections/all||New Arrivals|/collections/new-arrivals||Best Sellers|/collections/best-sellers||Sale|/collections/sale"
           }
         },
         "link_column_9qBEhm": {
           "type": "link_column",
           "settings": {
-            "column_title": "Categories",
+            "heading": "Categories",
             "links": "Vibrators|/collections/vibrators||Lubricants|/collections/lubricants||Anal Toys|/collections/anal-toys||BDSM|/collections/bdsm||Lingerie|/collections/lingerie"
           }
         },
         "link_column_Qce8z7": {
           "type": "link_column",
           "settings": {
-            "column_title": "Brands",
+            "heading": "Brands",
             "links": "LELO|/collections/lelo||Doc Johnson|/collections/doc-johnson||California Exotics|/collections/california-exotics||NS Novelties|/collections/ns-novelties||Pipedream|/collections/pipedream||View All Brands|/pages/brands"
           }
         },
         "link_column_iaWWzt": {
           "type": "link_column",
           "settings": {
-            "column_title": "Information",
+            "heading": "Information",
             "links": "About Us|/pages/about-us||Contact|/pages/contact||FAQ|/pages/faq||Shipping Policy|/pages/shipping-policy||Refund Policy|/pages/refund-policy||Privacy Policy|/pages/privacy-policy"
           }
         },
         "copyright_jtF9D7": {
           "type": "copyright",
           "settings": {
-            "column_title": "Copyright",
+            "heading": "Copyright",
             "copyright_text": "<p>MoonVelour, Inc<br/>© 2026</p>"
           }
         },
         "link_column_custcare": {
           "type": "link_column",
           "settings": {
-            "column_title": "Customer Care",
+            "heading": "Customer Care",
             "links": "Track Order|/pages/track-order||Discreet Shipping|/pages/discreet-shipping||Secure Payments|/pages/secure-payments"
           }
         }

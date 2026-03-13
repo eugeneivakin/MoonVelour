@@ -1,4 +1,7 @@
-<div id="footer-{{ section.id }}" class="footer-dame-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}">
+<div
+  id="footer-{{ section.id }}"
+  class="footer-dame-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}"
+>
   <footer class="dame-footer">
     <div class="dame-footer-content">
       {% if section.settings.show_newsletter %}
@@ -9,12 +12,14 @@
 
           {% form 'customer', class: 'dame-newsletter-form' %}
             <div class="dame-newsletter-input-group">
-              <input type="email"
-                     name="contact[email]"
-                     class="dame-newsletter-input"
-                     placeholder="{{ section.settings.email_placeholder }}"
-                     required
-                     aria-label="Email address">
+              <input
+                type="email"
+                name="contact[email]"
+                class="dame-newsletter-input"
+                placeholder="{{ section.settings.email_placeholder }}"
+                required
+                aria-label="Email address"
+              >
               <input type="hidden" name="contact[tags]" value="newsletter">
               <span class="dame-newsletter-separator">|</span>
               <button type="submit" class="dame-newsletter-submit">
@@ -30,7 +35,7 @@
 
             {% if form.errors %}
               <div class="dame-newsletter-error">
-                {{ form.errors.messages['email'] }}
+                {{ form.errors.messages.email }}
               </div>
             {% endif %}
           {% endform %}
@@ -43,8 +48,8 @@
             {% case block.type %}
               {% when 'link_column' %}
                 <div class="dame-footer-column" {{ block.shopify_attributes }}>
-                  {% if block.settings.column_title != blank %}
-                    <h6 class="dame-column-title">{{ block.settings.column_title }}</h6>
+                  {% if block.settings.heading != blank %}
+                    <h2 class="dame-column-title">{{ block.settings.heading }}</h2>
                   {% endif %}
 
                   {% if block.settings.links != blank %}
@@ -64,8 +69,8 @@
 
               {% when 'copyright' %}
                 <div class="dame-footer-column dame-copyright-column" {{ block.shopify_attributes }}>
-                  {% if block.settings.column_title != blank %}
-                    <h6 class="dame-column-title">{{ block.settings.column_title }}</h6>
+                  {% if block.settings.heading != blank %}
+                    <h2 class="dame-column-title">{{ block.settings.heading }}</h2>
                   {% endif %}
 
                   <div class="dame-footer-copyright">
@@ -80,15 +85,15 @@
       {% endif %}
     </div>
 
-      <div class="dame-footer-payments">
-        {{ 'visa' | payment_type_svg_tag }}
-        {{ 'master' | payment_type_svg_tag }}
-        {{ 'american_express' | payment_type_svg_tag }}
-        {{ 'apple_pay' | payment_type_svg_tag }}
-        {{ 'google_pay' | payment_type_svg_tag }}
-        {{ 'paypal' | payment_type_svg_tag }}
-        {{ 'shopify_pay' | payment_type_svg_tag }}
-      </div>
+    <div class="dame-footer-payments">
+      {{ 'visa' | payment_type_svg_tag }}
+      {{ 'master' | payment_type_svg_tag }}
+      {{ 'american_express' | payment_type_svg_tag }}
+      {{ 'apple_pay' | payment_type_svg_tag }}
+      {{ 'google_pay' | payment_type_svg_tag }}
+      {{ 'paypal' | payment_type_svg_tag }}
+      {{ 'shopify_pay' | payment_type_svg_tag }}
+    </div>
   </footer>
 </div>
 
@@ -419,7 +424,7 @@
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const newsletterInput = document.querySelector('#footer-{{ section.id }} .dame-newsletter-input');
     const submitButton = document.querySelector('#footer-{{ section.id }} .dame-newsletter-submit');
 
@@ -1015,7 +1020,7 @@
       "settings": [
         {
           "type": "text",
-          "id": "column_title",
+          "id": "heading",
           "label": "Column Title"
         },
         {
@@ -1033,7 +1038,7 @@
       "settings": [
         {
           "type": "text",
-          "id": "column_title",
+          "id": "heading",
           "label": "Column Title",
           "default": "Copyright"
         },
@@ -1053,35 +1058,35 @@
         {
           "type": "link_column",
           "settings": {
-            "column_title": "Product",
+            "heading": "Product",
             "links": "Shop|/collections/all||Returns|/pages/returns||FAQs|/pages/faq||Rewards|/pages/rewards||Refer A Friend|/pages/refer"
           }
         },
         {
           "type": "link_column",
           "settings": {
-            "column_title": "About",
+            "heading": "About",
             "links": "About Us|/pages/about||Contact Us|/pages/contact||Store Locator|/pages/stores||Careers|/pages/careers||Press|/pages/press"
           }
         },
         {
           "type": "link_column",
           "settings": {
-            "column_title": "Social",
+            "heading": "Social",
             "links": "Email|mailto:support@example.com||Facebook|https://facebook.com||Instagram|https://instagram.com||Twitter|https://twitter.com"
           }
         },
         {
           "type": "link_column",
           "settings": {
-            "column_title": "Terms",
+            "heading": "Terms",
             "links": "Terms & Conditions|/pages/terms||Privacy Policy|/pages/privacy||Patent Info|/pages/patent"
           }
         },
         {
           "type": "copyright",
           "settings": {
-            "column_title": "Copyright",
+            "heading": "Copyright",
             "copyright_text": "<p>Dame Products, Inc<br>© 2024</p>"
           }
         }

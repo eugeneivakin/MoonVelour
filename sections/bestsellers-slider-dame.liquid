@@ -1,4 +1,7 @@
-<div id="bestsellers-{{ section.id }}" class="bestsellers-slider-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}">
+<div
+  id="bestsellers-{{ section.id }}"
+  class="bestsellers-slider-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}"
+>
   <section class="dame-bestsellers-section">
     <div class="dame-bestsellers-header">
       <div class="dame-bestsellers-header-content">
@@ -43,18 +46,41 @@
           <div class="dame-products-slider" id="productsSlider-{{ section.id }}">
             {% for product in collection.products limit: section.settings.products_to_show %}
               <div class="dame-product-card">
-                <a href="{{ product.url }}" class="dame-product-image-link{% if product.images[1] %} dame-has-swap{% endif %}">
+                <a
+                  href="{{ product.url }}"
+                  class="dame-product-image-link{% if product.images[1] %} dame-has-swap{% endif %}"
+                >
                   <div class="dame-product-image">
                     {% if product.featured_image %}
-                      {{ product.featured_image | image_url: width: 600 | image_tag: loading: 'lazy', class: 'dame-product-img dame-product-img--primary', alt: product.featured_image.alt | escape }}
+                      {{
+                        product.featured_image
+                        | image_url: width: 600
+                        | image_tag:
+                          loading: 'lazy',
+                          class: 'dame-product-img dame-product-img--primary',
+                          alt: product.featured_image.alt
+                        | escape
+                      }}
                       {% if product.images[1] %}
-                        {{ product.images[1] | image_url: width: 600 | image_tag: loading: 'lazy', class: 'dame-product-img dame-product-img--hover', alt: product.images[1].alt | escape }}
+                        {{
+                          product.images[1]
+                          | image_url: width: 600
+                          | image_tag:
+                            loading: 'lazy',
+                            class: 'dame-product-img dame-product-img--hover',
+                            alt: product.images[1].alt
+                          | escape
+                        }}
                       {% endif %}
                     {% else %}
                       {{ 'product-1' | placeholder_svg_tag: 'dame-product-placeholder' }}
                     {% endif %}
                     {% if product.compare_at_price > product.price %}
-                      {% assign discount = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price %}
+                      {% assign discount = product.compare_at_price
+                        | minus: product.price
+                        | times: 100
+                        | divided_by: product.compare_at_price
+                      %}
                       <span class="dame-discount-badge-overlay">-{{ discount }}% OFF</span>
                     {% endif %}
                   </div>
@@ -69,14 +95,17 @@
                     <a href="{{ product.url }}">{{ product.title }}</a>
                   </h3>
 
-
                   {% if product.has_only_default_variant == false %}
                     <div class="dame-product-options">
                       {% for option in product.options_with_values %}
                         {% if option.name == 'Color' or option.name == 'Цвет' %}
                           <div class="dame-color-swatches">
                             {% for value in option.values %}
-                              <span class="dame-color-swatch" style="background-color: {{ value | handle }};" title="{{ value }}"></span>
+                              <span
+                                class="dame-color-swatch"
+                                style="background-color: {{ value | handle }};"
+                                title="{{ value }}"
+                              ></span>
                             {% endfor %}
                           </div>
                         {% endif %}
@@ -85,15 +114,17 @@
                   {% endif %}
 
                   {% if product.available == false %}
-                    <button class="dame-product-button dame-btn-sold-out" disabled>
-                      {{ section.settings.sold_out_text | default: "SOLD OUT" }} | {{ product.price | money }}
+                    <button class="button" disabled>
+                      {{ section.settings.sold_out_text | default: 'SOLD OUT' }} | {{ product.price | money }}
                     </button>
                   {% else %}
-                    <button class="dame-product-button dame-btn-add-to-cart"
-                            data-variant-id="{{ product.first_available_variant.id }}"
-                            data-product-url="{{ product.url }}"
-                            data-variant-count="{{ product.variants.size }}">
-                      {{ section.settings.add_to_cart_text | default: "ADD TO CART" }} | {{ product.price | money }}
+                    <button
+                      class="button"
+                      data-variant-id="{{ product.first_available_variant.id }}"
+                      data-product-url="{{ product.url }}"
+                      data-variant-count="{{ product.variants.size }}"
+                    >
+                      {{ section.settings.add_to_cart_text | default: 'ADD TO CART' }} | {{ product.price | money }}
                     </button>
                   {% endif %}
                 </div>
@@ -113,46 +144,46 @@
 </div>
 
 <style>
-  :root {
-    --dame-bestsellers-max-width: {{ section.settings.max_width }};
-    --dame-bestsellers-padding-top-desktop: {{ section.settings.padding_top_desktop }}px;
-    --dame-bestsellers-padding-bottom-desktop: {{ section.settings.padding_bottom_desktop }}px;
-    --dame-bestsellers-padding-top-mobile: {{ section.settings.padding_top_mobile }}px;
-    --dame-bestsellers-padding-bottom-mobile: {{ section.settings.padding_bottom_mobile }}px;
-    --dame-bestsellers-padding-left-desktop: {{ section.settings.padding_left_desktop }}px;
-    --dame-bestsellers-padding-right-desktop: {{ section.settings.padding_right_desktop }}px;
-    --dame-bestsellers-padding-left-mobile: {{ section.settings.padding_left_mobile }}px;
-    --dame-bestsellers-padding-right-mobile: {{ section.settings.padding_right_mobile }}px;
-    --dame-bestsellers-title-size-desktop: {{ section.settings.title_size_desktop }}px;
-    --dame-bestsellers-title-size-mobile: {{ section.settings.title_size_mobile }}px;
-    --dame-bestsellers-title-color: {{ section.settings.title_color }};
-    --dame-bestsellers-subtitle-size-desktop: {{ section.settings.subtitle_size_desktop }}px;
-    --dame-bestsellers-subtitle-size-mobile: {{ section.settings.subtitle_size_mobile }}px;
-    --dame-bestsellers-subtitle-color: {{ section.settings.subtitle_color }};
-    --dame-bestsellers-card-bg: {{ section.settings.card_bg_color }};
-    --dame-bestsellers-product-name-color: {{ section.settings.product_name_color }};
-    --dame-bestsellers-product-name-size-desktop: {{ section.settings.product_name_size_desktop }}px;
-    --dame-bestsellers-product-name-size-mobile: {{ section.settings.product_name_size_mobile }}px;
-    --dame-bestsellers-button-bg: {{ section.settings.button_bg_color }};
-    --dame-bestsellers-button-text-color: {{ section.settings.button_text_color }};
-    --dame-bestsellers-progress-bar-color: {{ section.settings.progress_bar_color }};
-  }
-
-  .bestsellers-slider-wrapper {
-    background-color: {{ section.settings.section_background_color }};
-    padding-top: var(--dame-bestsellers-padding-top-desktop);
-    padding-bottom: var(--dame-bestsellers-padding-bottom-desktop);
-  }
-
-  @media screen and (max-width: 749px) {
-    .bestsellers-slider-wrapper {
-      padding-top: var(--dame-bestsellers-padding-top-mobile);
-      padding-bottom: var(--dame-bestsellers-padding-bottom-mobile);
+    :root {
+      --dame-bestsellers-max-width: {{ section.settings.max_width }};
+      --dame-bestsellers-padding-top-desktop: {{ section.settings.padding_top_desktop }}px;
+      --dame-bestsellers-padding-bottom-desktop: {{ section.settings.padding_bottom_desktop }}px;
+      --dame-bestsellers-padding-top-mobile: {{ section.settings.padding_top_mobile }}px;
+      --dame-bestsellers-padding-bottom-mobile: {{ section.settings.padding_bottom_mobile }}px;
+      --dame-bestsellers-padding-left-desktop: {{ section.settings.padding_left_desktop }}px;
+      --dame-bestsellers-padding-right-desktop: {{ section.settings.padding_right_desktop }}px;
+      --dame-bestsellers-padding-left-mobile: {{ section.settings.padding_left_mobile }}px;
+      --dame-bestsellers-padding-right-mobile: {{ section.settings.padding_right_mobile }}px;
+      --dame-bestsellers-title-size-desktop: {{ section.settings.title_size_desktop }}px;
+      --dame-bestsellers-title-size-mobile: {{ section.settings.title_size_mobile }}px;
+      --dame-bestsellers-title-color: {{ section.settings.title_color }};
+      --dame-bestsellers-subtitle-size-desktop: {{ section.settings.subtitle_size_desktop }}px;
+      --dame-bestsellers-subtitle-size-mobile: {{ section.settings.subtitle_size_mobile }}px;
+      --dame-bestsellers-subtitle-color: {{ section.settings.subtitle_color }};
+      --dame-bestsellers-card-bg: {{ section.settings.card_bg_color }};
+      --dame-bestsellers-product-name-color: {{ section.settings.product_name_color }};
+      --dame-bestsellers-product-name-size-desktop: {{ section.settings.product_name_size_desktop }}px;
+      --dame-bestsellers-product-name-size-mobile: {{ section.settings.product_name_size_mobile }}px;
+      --dame-bestsellers-button-bg: {{ section.settings.button_bg_color }};
+      --dame-bestsellers-button-text-color: {{ section.settings.button_text_color }};
+      --dame-bestsellers-progress-bar-color: {{ section.settings.progress_bar_color }};
     }
-  }
 
-@keyframes dame-spin{to{transform:rotate(360deg)}}
-.dame-spinner{animation:dame-spin .6s linear infinite}
+    .bestsellers-slider-wrapper {
+      background-color: {{ section.settings.section_background_color }};
+      padding-top: var(--dame-bestsellers-padding-top-desktop);
+      padding-bottom: var(--dame-bestsellers-padding-bottom-desktop);
+    }
+
+    @media screen and (max-width: 749px) {
+      .bestsellers-slider-wrapper {
+        padding-top: var(--dame-bestsellers-padding-top-mobile);
+        padding-bottom: var(--dame-bestsellers-padding-bottom-mobile);
+      }
+    }
+
+  @keyframes dame-spin{to{transform:rotate(360deg)}}
+  .dame-spinner{animation:dame-spin .6s linear infinite}
 </style>
 
 <style>
@@ -474,17 +505,8 @@
     transform: scale(1.1);
   }
 
-  #bestsellers-{{ section.id }} .dame-product-button {
-    width: 100%;
-    padding: 16px;
-    border: none;
+  #bestsellers-{{ section.id }} .button {
     margin-top: auto;
-    border-radius: {{ section.settings.product_button_border_radius | default: 8 }}px;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    cursor: pointer;
-    transition: all 0.3s;
   }
 
   #bestsellers-{{ section.id }} .dame-btn-add-to-cart {
@@ -717,121 +739,136 @@
 </script>
 
 {% if section.settings.animate_bold_words %}
-<script>
-(function() {
-  const titleElement = document.querySelector('#bestsellers-{{ section.id }} .dame-bestsellers-title');
+  <script>
+    (function () {
+      const titleElement = document.querySelector('#bestsellers-{{ section.id }} .dame-bestsellers-title');
 
-  if (!titleElement) return;
+      if (!titleElement) return;
 
-  // Find all bold words (strong or b tags)
-  const boldWords = titleElement.querySelectorAll('strong, b');
+      // Find all bold words (strong or b tags)
+      const boldWords = titleElement.querySelectorAll('strong, b');
 
-  if (!boldWords.length) return;
+      if (!boldWords.length) return;
 
-  // Inject SVG scribble into each bold word
-  boldWords.forEach(function(boldElement) {
-    // Make sure the bold element has position: relative for the SVG
-    boldElement.style.position = 'relative';
-    boldElement.style.display = 'inline-block';
+      // Inject SVG scribble into each bold word
+      boldWords.forEach(function (boldElement) {
+        // Make sure the bold element has position: relative for the SVG
+        boldElement.style.position = 'relative';
+        boldElement.style.display = 'inline-block';
 
-    // Create SVG element
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('class', 'bold-word-svg');
-    svg.setAttribute('viewBox', '0 0 100 10');
-    svg.setAttribute('stroke', 'currentColor');
-    svg.setAttribute('fill', 'none');
-    svg.setAttribute('preserveAspectRatio', 'none');
+        // Create SVG element
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('class', 'bold-word-svg');
+        svg.setAttribute('viewBox', '0 0 100 10');
+        svg.setAttribute('stroke', 'currentColor');
+        svg.setAttribute('fill', 'none');
+        svg.setAttribute('preserveAspectRatio', 'none');
 
-    // Create path element with hand-drawn wavy underline
-    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('stroke-linejoin', 'round');
-    path.setAttribute('stroke-linecap', 'round');
-    path.setAttribute('stroke-width', '1.5');
-    path.setAttribute('pathLength', '1');
-    path.setAttribute('d', 'M2,6 C15,3 25,7 40,5 C55,3 70,8 85,5 C92,3 97,5 98,6');
+        // Create path element with hand-drawn wavy underline
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('stroke-linejoin', 'round');
+        path.setAttribute('stroke-linecap', 'round');
+        path.setAttribute('stroke-width', '1.5');
+        path.setAttribute('pathLength', '1');
+        path.setAttribute('d', 'M2,6 C15,3 25,7 40,5 C55,3 70,8 85,5 C92,3 97,5 98,6');
 
-    svg.appendChild(path);
-    boldElement.appendChild(svg);
-  });
+        svg.appendChild(path);
+        boldElement.appendChild(svg);
+      });
 
-  // IntersectionObserver to detect when section enters viewport
-  const observerOptions = {
-    threshold: 0.2,
-    rootMargin: '0px 0px -100px 0px'
-  };
+      // IntersectionObserver to detect when section enters viewport
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px',
+      };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        titleElement.classList.add('animate-words');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            titleElement.classList.add('animate-words');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
 
-  observer.observe(titleElement);
-})();
-</script>
+      observer.observe(titleElement);
+    })();
+  </script>
 {% endif %}
 
-
 <script>
-(function(){
-  document.addEventListener('click', function(e) {
-    var btn = e.target.closest('.dame-btn-add-to-cart');
-    if (!btn || btn.disabled) return;
-    e.preventDefault();
-    var variantId = btn.dataset.variantId;
-    var variantCount = parseInt(btn.dataset.variantCount || '1');
-    if (!variantId || variantCount > 1) {
-      window.location.href = btn.dataset.productUrl;
-      return;
-    }
-    var origHTML = btn.innerHTML;
-    btn.innerHTML = '<svg class="dame-spinner" width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="50 20" stroke-linecap="round"/></svg>';
-    btn.disabled = true;
-    btn.style.display = 'flex';
-    btn.style.alignItems = 'center';
-    btn.style.justifyContent = 'center';
-    fetch('/cart/add.js', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ items: [{ id: parseInt(variantId), quantity: 1 }] })
-    })
-    .then(function(r) { return r.json(); })
-    .then(function() { return fetch('/?sections=cart-drawer,cart-icon-bubble'); })
-    .then(function(r) { return r.json(); })
-    .then(function(sections) {
-      var drawerEl = document.getElementById('CartDrawer');
-      if (drawerEl) {
-        var p = new DOMParser().parseFromString(sections['cart-drawer'], 'text/html');
-        var n = p.querySelector('#CartDrawer');
-        if (n) drawerEl.innerHTML = n.innerHTML;
+  (function () {
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.dame-btn-add-to-cart');
+      if (!btn || btn.disabled) return;
+      e.preventDefault();
+      var variantId = btn.dataset.variantId;
+      var variantCount = parseInt(btn.dataset.variantCount || '1');
+      if (!variantId || variantCount > 1) {
+        window.location.href = btn.dataset.productUrl;
+        return;
       }
-      var bubbleEl = document.getElementById('cart-icon-bubble');
-      if (bubbleEl) {
-        var p2 = new DOMParser().parseFromString(sections['cart-icon-bubble'], 'text/html');
-        var n2 = p2.querySelector('.shopify-section');
-        if (n2) bubbleEl.innerHTML = n2.innerHTML;
-      }
-      var cartDrawer = document.querySelector('cart-drawer');
-      if (cartDrawer) {
-        cartDrawer.classList.remove('is-empty');
-        var cdi = cartDrawer.querySelector('cart-drawer-items');
-        if (cdi) cdi.classList.remove('is-empty');
-        cartDrawer.classList.add('animate', 'active');
-        document.body.classList.add('overflow-hidden');
-        var overlay = cartDrawer.querySelector('#CartDrawer-Overlay');
-        if (overlay) overlay.addEventListener('click', function() { cartDrawer.close(); });
-      }
-      btn.innerHTML = origHTML; btn.disabled = false; btn.style.display = '';
-    })
-    .catch(function() {
-      btn.innerHTML = 'ERROR';
-      setTimeout(function() { btn.innerHTML = origHTML; btn.disabled = false; btn.style.display = ''; }, 1500);
+      var origHTML = btn.innerHTML;
+      btn.innerHTML =
+        '<svg class="dame-spinner" width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="50 20" stroke-linecap="round"/></svg>';
+      btn.disabled = true;
+      btn.style.display = 'flex';
+      btn.style.alignItems = 'center';
+      btn.style.justifyContent = 'center';
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items: [{ id: parseInt(variantId), quantity: 1 }] }),
+      })
+        .then(function (r) {
+          return r.json();
+        })
+        .then(function () {
+          return fetch('/?sections=cart-drawer,cart-icon-bubble');
+        })
+        .then(function (r) {
+          return r.json();
+        })
+        .then(function (sections) {
+          var drawerEl = document.getElementById('CartDrawer');
+          if (drawerEl) {
+            var p = new DOMParser().parseFromString(sections['cart-drawer'], 'text/html');
+            var n = p.querySelector('#CartDrawer');
+            if (n) drawerEl.innerHTML = n.innerHTML;
+          }
+          var bubbleEl = document.getElementById('cart-icon-bubble');
+          if (bubbleEl) {
+            var p2 = new DOMParser().parseFromString(sections['cart-icon-bubble'], 'text/html');
+            var n2 = p2.querySelector('.shopify-section');
+            if (n2) bubbleEl.innerHTML = n2.innerHTML;
+          }
+          var cartDrawer = document.querySelector('cart-drawer');
+          if (cartDrawer) {
+            cartDrawer.classList.remove('is-empty');
+            var cdi = cartDrawer.querySelector('cart-drawer-items');
+            if (cdi) cdi.classList.remove('is-empty');
+            cartDrawer.classList.add('animate', 'active');
+            document.body.classList.add('overflow-hidden');
+            var overlay = cartDrawer.querySelector('#CartDrawer-Overlay');
+            if (overlay)
+              overlay.addEventListener('click', function () {
+                cartDrawer.close();
+              });
+          }
+          btn.innerHTML = origHTML;
+          btn.disabled = false;
+          btn.style.display = '';
+        })
+        .catch(function () {
+          btn.innerHTML = 'ERROR';
+          setTimeout(function () {
+            btn.innerHTML = origHTML;
+            btn.disabled = false;
+            btn.style.display = '';
+          }, 1500);
+        });
     });
-  });
-})();
+  })();
 </script>
 {% schema %}
 {

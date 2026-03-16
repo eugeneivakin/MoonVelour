@@ -54,7 +54,7 @@
           "type": "upsell",
           "settings": {
             "upsell_heading": "Recommended products",
-            "upsell_source": "metafield",
+            "upsell_source": "shopify",
             "upsell_products_limit": 3
           }
         },

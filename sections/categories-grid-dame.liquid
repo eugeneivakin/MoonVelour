@@ -1,4 +1,7 @@
-<div id="categories-{{ section.id }}" class="categories-grid-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}">
+<div
+  id="categories-{{ section.id }}"
+  class="categories-grid-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}"
+>
   <section class="dame-categories-section">
     {% if section.settings.show_section_title and section.settings.section_title != blank %}
       <div class="dame-categories-header">
@@ -11,20 +14,29 @@
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'category' %}
-              <a href="{{ block.settings.button_url }}" class="dame-category-card {% if block.settings.use_image_as_background %}dame-card-bg-image{% endif %}" {{ block.shopify_attributes }}
+              <a
+                href="{{ block.settings.button_url }}"
+                class="dame-category-card {% if block.settings.use_image_as_background %}dame-card-bg-image{% endif %}"
+                {{ block.shopify_attributes }}
                 {% if block.settings.use_image_as_background and block.settings.category_image != blank %}
                   style="background-image: url('{{ block.settings.category_image | image_url: width: 800 }}');"
                 {% else %}
                   style="background-color: {{ block.settings.card_bg_color }};"
-                {% endif %}>
-
+                {% endif %}
+              >
                 {% if block.settings.use_image_as_background and block.settings.show_overlay %}
-                  <div class="dame-category-overlay" style="display: block; background-color: {{ block.settings.overlay_color }}; opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};"></div>
+                  <div
+                    class="dame-category-overlay"
+                    style="display: block; background-color: {{ block.settings.overlay_color }}; opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};"
+                  ></div>
                 {% endif %}
 
                 <div class="dame-category-header">
                   {% if block.settings.badge_text != blank %}
-                    <span class="dame-category-badge" style="background-color: {{ block.settings.badge_bg_color }}; color: {{ block.settings.badge_text_color }};">
+                    <span
+                      class="dame-category-badge"
+                      style="background-color: {{ block.settings.badge_bg_color }}; color: {{ block.settings.badge_text_color }};"
+                    >
                       {{ block.settings.badge_text }}
                     </span>
                   {% endif %}
@@ -39,7 +51,12 @@
                 {% if block.settings.use_image_as_background == false %}
                   <div class="dame-category-image">
                     {% if block.settings.category_image != blank %}
-                      {{ block.settings.category_image | image_url: width: 600 | image_tag: loading: 'lazy', class: 'dame-category-img', alt: block.settings.category_image.alt | escape }}
+                      {{
+                        block.settings.category_image
+                        | image_url: width: 600
+                        | image_tag: loading: 'lazy', class: 'dame-category-img', alt: block.settings.category_image.alt
+                        | escape
+                      }}
                     {% elsif block.settings.category_icon != blank %}
                       <div class="dame-category-icon">{{ block.settings.category_icon }}</div>
                     {% endif %}
@@ -47,7 +64,10 @@
                 {% endif %}
 
                 {% if block.settings.button_text != blank %}
-                  <span class="dame-category-shop-btn" style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }}; border-color: {{ block.settings.button_bg_color }};">
+                  <span
+                    class="button"
+                    style="background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }}; border-color: {{ block.settings.button_bg_color }};"
+                  >
                     {{ block.settings.button_text }}
                     <span class="dame-shop-arrow">→</span>
                   </span>
@@ -178,8 +198,7 @@
     z-index: 1;
   }
 
-  #categories-{{ section.id }} .dame-card-bg-image .dame-category-header,
-  #categories-{{ section.id }} .dame-card-bg-image .dame-category-shop-btn {
+  #categories-{{ section.id }} .dame-card-bg-image .dame-category-header {
     position: relative;
     z-index: 2;
   }
@@ -240,21 +259,9 @@
     max-height: {{ section.settings.icon_max_height }}px;
   }
 
-  #categories-{{ section.id }} .dame-category-shop-btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 25px;
-    border: 1px solid;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    text-align: center;
-    z-index: 3;
-    pointer-events: auto;
-    position: relative;
-    cursor: pointer;
+  #categories-{{ section.id }} .button {
+    z-index: 5;
+
     {% if section.settings.button_hover_show %}
       opacity: 0;
       transform: translateY(10px);
@@ -267,21 +274,12 @@
     transition: all 0.3s ease;
   }
 
-  #categories-{{ section.id }} .dame-category-card:hover .dame-category-shop-btn {
+  #categories-{{ section.id }} .dame-category-card:hover .button {
     {% if section.settings.button_hover_show %}
       opacity: 1;
       transform: translateY(0);
     {% endif %}
   }
-
-  #categories-{{ section.id }} .dame-category-shop-btn:hover {
-    transform: translateY(-2px);
-  }
-
-  #categories-{{ section.id }} .dame-category-shop-btn:hover .dame-shop-arrow {
-    transform: translateX(4px);
-  }
-
 
   @media screen and (max-width: 989px) and (min-width: 750px) {
     #categories-{{ section.id }} .dame-categories-grid {
@@ -322,9 +320,7 @@
       max-height: {{ section.settings.icon_max_height_mobile }}px;
     }
 
-    #categories-{{ section.id }} .dame-category-shop-btn {
-      padding: 10px 24px;
-      font-size: 12px;
+    #categories-{{ section.id }} .button {
       opacity: 1;
       transform: translateY(0);
     }
@@ -369,31 +365,31 @@
 </style>
 
 <script>
-(function() {
-  const cards = document.querySelectorAll('#categories-{{ section.id }} .dame-category-card');
+  (function () {
+    const cards = document.querySelectorAll('#categories-{{ section.id }} .dame-category-card');
 
-  if (!cards.length) return;
+    if (!cards.length) return;
 
-  // IntersectionObserver to detect when cards enter viewport
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+    // IntersectionObserver to detect when cards enter viewport
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px',
+    };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-        observer.unobserve(entry.target); // Stop observing once animated
-      }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target); // Stop observing once animated
+        }
+      });
+    }, observerOptions);
+
+    // Observe all cards
+    cards.forEach((card) => {
+      observer.observe(card);
     });
-  }, observerOptions);
-
-  // Observe all cards
-  cards.forEach(card => {
-    observer.observe(card);
-  });
-})();
+  })();
 </script>
 
 {% schema %}

@@ -52,16 +52,12 @@
                     <h2 class="dame-column-title">{{ block.settings.heading }}</h2>
                   {% endif %}
 
-                  {% if block.settings.links != blank %}
+                  {% if block.settings.menu != blank %}
                     <ul class="dame-column-links">
-                      {% assign links_array = block.settings.links | split: '||' %}
-                      {% for link_item in links_array %}
-                        {% assign link_parts = link_item | split: '|' %}
-                        {% if link_parts.size == 2 %}
-                          <li>
-                            <a href="{{ link_parts[1] | strip }}">{{ link_parts[0] | strip }}</a>
-                          </li>
-                        {% endif %}
+                      {% for link_item in block.settings.menu.links %}
+                        <li>
+                          <a href="{{ link_item.url }}">{{ link_item.title }}</a>
+                        </li>
                       {% endfor %}
                     </ul>
                   {% endif %}
@@ -1024,10 +1020,9 @@
           "label": "Column Title"
         },
         {
-          "type": "textarea",
-          "id": "links",
-          "label": "Links",
-          "info": "Format: Text|URL||Text|URL||Text|URL (use || to separate links)"
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
         }
       ]
     },
@@ -1058,29 +1053,25 @@
         {
           "type": "link_column",
           "settings": {
-            "heading": "Product",
-            "links": "Shop|/collections/all||Returns|/pages/returns||FAQs|/pages/faq||Rewards|/pages/rewards||Refer A Friend|/pages/refer"
+            "heading": "Product"
           }
         },
         {
           "type": "link_column",
           "settings": {
-            "heading": "About",
-            "links": "About Us|/pages/about||Contact Us|/pages/contact||Store Locator|/pages/stores||Careers|/pages/careers||Press|/pages/press"
+            "heading": "About"
           }
         },
         {
           "type": "link_column",
           "settings": {
-            "heading": "Social",
-            "links": "Email|mailto:support@example.com||Facebook|https://facebook.com||Instagram|https://instagram.com||Twitter|https://twitter.com"
+            "heading": "Social"
           }
         },
         {
           "type": "link_column",
           "settings": {
-            "heading": "Terms",
-            "links": "Terms & Conditions|/pages/terms||Privacy Policy|/pages/privacy||Patent Info|/pages/patent"
+            "heading": "Terms"
           }
         },
         {

@@ -1,5 +1,5 @@
 <div id="image-hero-{{ section.id }}" class="image-hero-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}">
-  <div class="image-hero-container">
+  <div class="image-hero-container page-width">
     <div class="image-hero-banner">
       {% if section.settings.desktop_image != blank or section.settings.mobile_image != blank %}
         <div class="image-hero-media">
@@ -44,8 +44,6 @@
 
   #image-hero-{{ section.id }} .image-hero-container {
     max-width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
   }
 
   #image-hero-{{ section.id }} .image-hero-banner {

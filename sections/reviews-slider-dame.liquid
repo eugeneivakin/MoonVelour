@@ -1,4 +1,4 @@
-<div id="reviews-{{ section.id }}" class="reviews-slider-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}">
+<div id="reviews-{{ section.id }}" class="reviews-slider-wrapper page-width {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}">
   <section class="dame-reviews-section">
     {% if section.settings.section_title != blank or section.settings.section_subtitle != blank %}
       <div class="dame-reviews-header">
@@ -84,8 +84,6 @@
     background-color: {{ section.settings.section_background_color }};
     padding-top: var(--dame-reviews-padding-top-desktop);
     padding-bottom: var(--dame-reviews-padding-bottom-desktop);
-    padding-left: 0;
-    padding-right: 0;
     overflow: visible;
   }
 
@@ -93,8 +91,6 @@
     .reviews-slider-wrapper {
       padding-top: var(--dame-reviews-padding-top-mobile);
       padding-bottom: var(--dame-reviews-padding-bottom-mobile);
-      padding-left: 0;
-      padding-right: 0;
     }
   }
 

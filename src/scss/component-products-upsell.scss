@@ -1,8 +1,5 @@
 @use "mixins/media" as *;
 
-.component-products-upsell {
-}
-
 .component-products-upsell__title {
   margin: 0 0 2rem;
 }
@@ -73,6 +70,7 @@
 
   .card-product__title {
     // color: inherit;
+    font-size: calc(var(--font-heading-scale) * 1.4rem);
     margin: 0 0 1rem;
 
     a {

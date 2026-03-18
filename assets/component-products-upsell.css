@@ -61,6 +61,7 @@
   width: 100%;
 }
 .card-product--upsell .card-product__title {
+  font-size: calc(var(--font-heading-scale) * 1.4rem);
   margin: 0 0 1rem;
 }
 .card-product--upsell .card-product__title a {

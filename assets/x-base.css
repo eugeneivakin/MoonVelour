@@ -10,3 +10,7 @@ h5 p,
 h6 p {
   margin: 0;
 }
+
+.button {
+  padding: 1rem 1.5rem;
+}

@@ -152,16 +152,16 @@
         <h1 class="header__heading">
       {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-        {%- if true -%}
+        {%- if settings.logo != blank -%}
           <div class="header__heading-logo-wrapper">
-            {{
-              settings.logo
-              | image_url: width: settings.logo.width
-              | image_tag: width: settings.logo_width, loading: 'eager'
-            }}
+            <img src="{{ settings.logo | image_url: width: settings.logo_width }}"
+                 alt="{{ settings.logo.alt | default: shop.name }}"
+                 class="header__heading-logo motion-reduce"
+                 width="{{ settings.logo_width }}"
+                 loading="eager">
           </div>
         {%- else -%}
-          <span class="h2">MoonVelour</span>
+          <span class="h2">{{ shop.name }}</span>
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}

@@ -45,9 +45,9 @@
                     <div class="dame-cg-stars-row"><span class="jdgm-widget jdgm-preview-badge" data-id="{{ product.id }}"></span></div>
                     <h3 class="dame-cg-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
                     {% if product.available == false %}
-                      <button class="dame-cg-btn dame-cg-btn--sold button" disabled>SOLD OUT | {{ product.price | money }}</button>
+                      <button class="dame-cg-btn dame-cg-btn--sold" disabled>SOLD OUT | {{ product.price | money }}</button>
                     {% else %}
-                      <button class="dame-cg-btn dame-cg-btn--cart button" data-variant-id="{{ product.first_available_variant.id }}" data-product-url="{{ product.url }}" data-variant-count="{{ product.variants.size }}" data-product-title="{{ product.title | escape }}">ADD TO CART | {{ product.price | money }}</button>
+                      <button class="dame-cg-btn dame-cg-btn--cart" data-variant-id="{{ product.first_available_variant.id }}" data-product-url="{{ product.url }}" data-variant-count="{{ product.variants.size }}" data-product-title="{{ product.title | escape }}">ADD TO CART | {{ product.price | money }}</button>
                     {% endif %}
                   </div>
                 </div>
@@ -85,6 +85,10 @@
 @media(max-width:749px){.dame-cg-title{font-size:15px}}
 .dame-cg-title a{color:#000;text-decoration:none}
 .dame-cg-title a:hover{opacity:.8}
+.dame-cg-btn{width:100%;padding:14px;border:none;border-radius:8px;font-size:12px;text-transform:uppercase;letter-spacing:1.5px;cursor:pointer;transition:all .3s;font-weight:400;margin-top:auto}
+.dame-cg-btn--cart{background:#7850ca;color:#fff}
+.dame-cg-btn--cart:hover{opacity:.9;transform:translateY(-2px)}
+.dame-cg-btn--sold{background:#b8b3e8;color:#fff;cursor:not-allowed}
 
 @keyframes dame-spin{to{transform:rotate(360deg)}}
 .dame-spinner{animation:dame-spin .6s linear infinite}
@@ -97,7 +101,7 @@
     <button id="dame-qp-close" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#666">&times;</button>
     <h3 id="dame-qp-title" style="margin:0 0 16px;font-size:18px;font-weight:500;padding-right:30px"></h3>
     <div id="dame-qp-options"></div>
-    <button id="dame-qp-add" class="dame-cg-btn dame-cg-btn--cart button" style="margin-top:16px">ADD TO CART</button>
+    <button id="dame-qp-add" class="dame-cg-btn dame-cg-btn--cart" style="margin-top:16px">ADD TO CART</button>
   </div>
 </div>
 
@@ -234,7 +238,7 @@
     <button id="dame-qp-close" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#666">&times;</button>
     <h3 id="dame-qp-title" style="margin:0 0 16px;font-size:18px;font-weight:500;padding-right:30px"></h3>
     <div id="dame-qp-options"></div>
-    <button id="dame-qp-add" class="dame-cg-btn dame-cg-btn--cart button" style="margin-top:16px">ADD TO CART</button>
+    <button id="dame-qp-add" class="dame-cg-btn dame-cg-btn--cart" style="margin-top:16px">ADD TO CART</button>
   </div>
 </div>
 

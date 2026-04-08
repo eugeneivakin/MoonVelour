@@ -96,7 +96,7 @@
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
-          <a href="/checkout" class="button button--secondary button--full-width" onclick="event.preventDefault(); this.closest('form').action='/checkout'; this.closest('form').submit();">
+          <a href="/checkout" class="mv-buy-now-btn" onclick="event.preventDefault(); this.closest('form').action='/checkout'; this.closest('form').submit();">
             Buy it now
           </a>
           <div class="mv-payment-icons-row">

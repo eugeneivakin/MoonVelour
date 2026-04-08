@@ -19,7 +19,9 @@
   .dame-rel-price { font-family: var(--font-body-family); font-size: 14px; color: #333; margin-bottom: 10px; }
   .dame-rel-price s { color: #999; margin-right: 6px; }
   .dame-rel-price .sale { color: #7850ca; font-weight: 600; }
-  .dame-rel-btn { margin-top: auto;}
+  .dame-rel-btn { display: block; width: 100%; padding: 10px; border: none; border-radius: 8px; background: #7850ca; color: #fff; font-family: var(--font-body-family); font-size: 13px; font-weight: 400; cursor: pointer; text-align: center; margin-top: auto; transition: background 0.2s; letter-spacing: 0.5px; }
+  .dame-rel-btn:hover { background: #624c63; }
+  .dame-rel-btn:disabled { background: #b8b3e8; cursor: not-allowed; }
   .dame-rel-disc { position: absolute; top: 10px; right: 10px; background: #ff4444; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 6px; z-index: 2; }
 {%- endstyle -%}
 
@@ -63,14 +65,14 @@
                 {% endif %}
               </div>
               {% if recommendation.available %}
-                <button class="dame-rel-btn dame-btn-add-to-cart button"
+                <button class="dame-rel-btn dame-btn-add-to-cart"
                         data-variant-id="{{ recommendation.first_available_variant.id }}"
                         data-product-url="{{ recommendation.url }}"
                         data-variant-count="{{ recommendation.variants.size }}">
                   ADD TO CART | {{ recommendation.price | money }}
                 </button>
               {% else %}
-                <button class="dame-rel-btn button" disabled>SOLD OUT</button>
+                <button class="dame-rel-btn" disabled>SOLD OUT</button>
               {% endif %}
             </div>
           </div>

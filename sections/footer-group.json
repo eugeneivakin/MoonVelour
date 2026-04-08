@@ -11,58 +11,49 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "quote_above_footer": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div style=\"text-align:center;padding:20px 20px;max-width:800px;margin:0 auto\"><p style=\"font-size:22px;font-style:italic;color:#624c63;line-height:1.6;font-weight:300;letter-spacing:0.5px;margin:0\">&ldquo;Every product we offer is selected with care, focusing on quality, comfort and trust&rdquo;</p></div>",
-        "color_scheme": "scheme-1",
-        "padding_top": 20,
-        "padding_bottom": 0
-      }
-    },
     "footer_dame_pdgg9b": {
       "type": "footer-dame",
       "blocks": {
         "link_column_h4kgKX": {
           "type": "link_column",
           "settings": {
-            "heading": "Shop",
-            "menu": "footer-menu-column-1"
+            "column_title": "Shop",
+            "links": "All Products|/collections/all||New Arrivals|/collections/new-arrivals||Best Sellers|/collections/best-sellers||Sale|/collections/sale"
           }
         },
         "link_column_9qBEhm": {
           "type": "link_column",
           "settings": {
-            "heading": "Categories",
-            "menu": "footer-menu-column-2"
+            "column_title": "Categories",
+            "links": "Vibrators|/collections/vibrators||Lubricants|/collections/lubricants||Anal Toys|/collections/anal-toys||BDSM|/collections/bdsm||Lingerie|/collections/lingerie"
           }
         },
         "link_column_Qce8z7": {
           "type": "link_column",
           "settings": {
-            "heading": "Brands",
-            "menu": "footer-menu-column-3"
+            "column_title": "Brands",
+            "links": "LELO|/collections/lelo||Doc Johnson|/collections/doc-johnson||California Exotics|/collections/california-exotics||NS Novelties|/collections/ns-novelties||Pipedream|/collections/pipedream||View All Brands|/pages/brands"
           }
         },
         "link_column_iaWWzt": {
           "type": "link_column",
           "settings": {
-            "heading": "Information",
-            "menu": "footer-menu-column-4"
-          }
-        },
-        "link_column_custcare": {
-          "type": "link_column",
-          "settings": {
-            "heading": "Customer Care",
-            "menu": "footer-menu-column-5"
+            "column_title": "Information",
+            "links": "About Us|/pages/about-us||Contact|/pages/contact||FAQ|/pages/faq||Shipping Policy|/pages/shipping-policy||Refund Policy|/pages/refund-policy||Privacy Policy|/pages/privacy-policy"
           }
         },
         "copyright_jtF9D7": {
           "type": "copyright",
           "settings": {
-            "heading": "Copyright",
+            "column_title": "Copyright",
             "copyright_text": "<p>MoonVelour, Inc<br/>© 2026</p>"
+          }
+        },
+        "link_column_custcare": {
+          "type": "link_column",
+          "settings": {
+            "column_title": "Customer Care",
+            "links": "Track Order|/pages/track-order||Discreet Shipping|/pages/discreet-shipping||Secure Payments|/pages/secure-payments"
           }
         }
       },
@@ -157,6 +148,15 @@
         "margin_top": 0,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "quote_above_footer": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align:center;padding:48px 20px;max-width:800px;margin:0 auto\"><p style=\"font-size:22px;font-style:italic;color:#624c63;line-height:1.6;font-weight:300;letter-spacing:0.5px;margin:0\">&ldquo;Every product we offer is selected with care, focusing on quality, comfort and trust&rdquo;</p></div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 0
       }
     }
   },

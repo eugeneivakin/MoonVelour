@@ -16,8 +16,8 @@
           "type": "title",
           "settings": {}
         },
-        "judge_me_reviews_preview_badge_tm6NdC": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "rating": {
+          "type": "rating",
           "settings": {}
         },
         "price": {
@@ -50,14 +50,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "upsell_bkYMJJ": {
-          "type": "upsell",
-          "settings": {
-            "upsell_heading": "Recommended products",
-            "upsell_source": "shopify",
-            "upsell_products_limit": 3
-          }
-        },
         "icon_benefits": {
           "type": "icon-with-text",
           "settings": {
@@ -88,24 +80,18 @@
           "settings": {
             "block_heading": "Pairs well with",
             "make_collapsible_row": false,
-            "icon": "price_tag",
-            "product_list_limit": 4,
-            "products_per_page": 3,
-            "pagination_style": "counter",
-            "image_ratio": "square",
-            "enable_quick_add": false
+            "product_list_limit": 4
           }
         }
       },
       "block_order": [
         "title",
-        "judge_me_reviews_preview_badge_tm6NdC",
+        "rating",
         "price",
         "inventory",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "upsell_bkYMJJ",
         "icon_benefits",
         "description",
         "collapsible_shipping",
@@ -127,37 +113,24 @@
         "padding_bottom": 12
       }
     },
-    "1773424614516aac47": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_XDN3ai": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_XDN3ai"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
         "heading": "You may also like",
         "products_to_show": 4
       }
+    },
+    "product_reviews": {
+      "type": "product-reviews-dame",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
     "main",
-    "1773424614516aac47",
+    "product_reviews",
     "related-products"
   ]
 }

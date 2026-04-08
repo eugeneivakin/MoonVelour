@@ -7,6 +7,24 @@
   --mv-brand-accent: #8B3A6E;
 }
 
+/* === PRODUCT PAGE: Button Styling === */
+.product-form__submit.button--primary,
+.product-form__submit.button--secondary {
+  background-color: var(--mv-brand-primary) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  padding: 16px 24px;
+  transition: all 0.25s ease;
+}
+.product-form__submit.button--primary:hover,
+.product-form__submit.button--secondary:hover {
+  background-color: var(--mv-brand-accent) !important;
+  opacity: 0.95;
+}
 
 /* Dynamic checkout (Buy it now) button */
 .shopify-payment-button__button {
@@ -115,6 +133,32 @@ input[type="radio"]:checked {
   animation-duration: 40s !important;
 }
 
+
+/* === PDP: Buy It Now button === */
+.mv-buy-now-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 24px;
+  background: transparent;
+  color: var(--mv-brand-primary);
+  border: 1.5px solid var(--mv-brand-primary);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.mv-buy-now-btn:hover {
+  background: var(--mv-brand-primary);
+  color: #fff;
+}
+
 /* === PDP: Payment icons row under buttons === */
 .mv-payment-icons-row {
   display: flex;
@@ -129,6 +173,32 @@ input[type="radio"]:checked {
   width: 36px;
   height: 22px;
 }
+
+/* === PDP: Add to cart primary style (when dynamic checkout is off) === */
+.product-form__submit.button--primary {
+  background-color: var(--mv-brand-primary) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px;
+  font-weight: 600;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.product-form__submit.button--primary:hover {
+  background-color: var(--mv-brand-accent) !important;
+}
+.product-form__submit.button--primary:focus,
+.product-form__submit.button--primary:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.product-form__submit.button--primary::after,
+.product-form__submit.button--primary:hover::after,
+.product-form__submit.button--primary:focus::after {
+  display: none !important;
+}
+
 
 /* === HEADER: Logo (physically cropped SVG, no CSS hack needed) === */
 
@@ -340,6 +410,11 @@ input[type="radio"]:checked {
     font-size: 11px !important;
     padding: 12px 14px !important;
     min-height: 44px !important;
+  }
+  
+  /* Better section spacing on mobile */
+  .section-bestsellers-dame {
+    padding: 32px 0 !important;
   }
   
   /* SEE ALL button more prominent on mobile */

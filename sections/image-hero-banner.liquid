@@ -1,5 +1,5 @@
 <div id="image-hero-{{ section.id }}" class="image-hero-wrapper {% if section.settings.custom_classes %}{{ section.settings.custom_classes }}{% endif %}">
-  <div class="image-hero-container page-width">
+  <div class="image-hero-container">
     <div class="image-hero-banner">
       {% if section.settings.desktop_image != blank or section.settings.mobile_image != blank %}
         <div class="image-hero-media">
@@ -26,7 +26,7 @@
           {% endif %}
 
           {% if section.settings.button_text != blank %}
-            <a href="{{ section.settings.button_url }}" class="button">
+            <a href="{{ section.settings.button_url }}" class="image-hero-button">
               {{ section.settings.button_text }}
             </a>
           {% endif %}
@@ -44,6 +44,8 @@
 
   #image-hero-{{ section.id }} .image-hero-container {
     max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   #image-hero-{{ section.id }} .image-hero-banner {
@@ -193,6 +195,27 @@
     letter-spacing: -0.5px;
   }
 
+  #image-hero-{{ section.id }} .image-hero-button {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: {{ section.settings.button_bg_color }};
+    color: {{ section.settings.button_text_color }};
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 24px;
+    border: 1px solid {{ section.settings.button_bg_color }};
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  #image-hero-{{ section.id }} .image-hero-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
   @media screen and (max-width: 749px) {
     #image-hero-{{ section.id }} {
       padding-top: {{ section.settings.padding_top_mobile }}px;
@@ -226,6 +249,11 @@
 
     #image-hero-{{ section.id }} .image-hero-heading {
       font-size: {{ section.settings.title_size_mobile }}px;
+    }
+
+    #image-hero-{{ section.id }} .image-hero-button {
+      padding: 10px 24px;
+      font-size: 12px;
     }
   }
 </style>

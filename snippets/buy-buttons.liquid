@@ -96,7 +96,11 @@
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
-          <a href="/checkout" class="mv-buy-now-btn" onclick="event.preventDefault(); this.closest('form').action='/checkout'; this.closest('form').submit();">
+          <a
+            href="/checkout"
+            class="mv-buy-now-btn"
+            onclick="event.preventDefault(); this.closest('form').action='/checkout'; this.closest('form').submit();"
+          >
             Buy it now
           </a>
           <div class="mv-payment-icons-row">
@@ -108,7 +112,7 @@
             {{ 'paypal' | payment_type_svg_tag: class: 'mv-pay-icon' }}
             {{ 'shopify_pay' | payment_type_svg_tag: class: 'mv-pay-icon' }}
           </div>
-</div>
+        </div>
       {%- endform -%}
     </product-form>
   {%- else -%}

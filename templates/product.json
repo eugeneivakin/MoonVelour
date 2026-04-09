@@ -69,10 +69,19 @@
         "collapsible_shipping": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
+            "heading": "Shipping",
             "icon": "truck",
-            "content": "<p>Free shipping on orders over $100. Standard shipping takes 3-7 business days.</p><p>We accept returns within 30 days of purchase for unopened items in original packaging.</p>",
-            "page": ""
+            "content": "",
+            "page": "shipping-policy"
+          }
+        },
+        "collapsible_tab_4AWeWF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Returns",
+            "icon": "return",
+            "content": "",
+            "page": "refund-policy"
           }
         },
         "complementary": {
@@ -80,7 +89,12 @@
           "settings": {
             "block_heading": "Pairs well with",
             "make_collapsible_row": false,
-            "product_list_limit": 4
+            "icon": "price_tag",
+            "product_list_limit": 4,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
           }
         }
       },
@@ -95,6 +109,7 @@
         "icon_benefits",
         "description",
         "collapsible_shipping",
+        "collapsible_tab_4AWeWF",
         "complementary"
       ],
       "settings": {
@@ -113,18 +128,18 @@
         "padding_bottom": 12
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "You may also like",
-        "products_to_show": 4
-      }
-    },
     "product_reviews": {
       "type": "product-reviews-dame",
       "settings": {
         "padding_top": 20,
         "padding_bottom": 40
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "products_to_show": 4
       }
     }
   },

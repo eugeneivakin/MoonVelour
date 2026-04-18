@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_banner_dame": {
@@ -137,7 +146,7 @@
         "padding_bottom_desktop": 16,
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 16,
-        "desktop_image": "shopify://shop_images/moonvelour-hero-1920.jpg",
+        "desktop_image": "shopify://shop_images/Bild_02.webp",
         "mobile_image": "shopify://shop_images/photo-1557682250-33bd709cbe85.jpg",
         "image_position_mobile": "center center",
         "min_height_desktop": 650,
